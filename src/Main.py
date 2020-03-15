@@ -1,4 +1,5 @@
 from src import rede_neural as rn, camada_entrada
+from src.helpers.Mapper import Mapper
 
 
 caracteres_limpos = camada_entrada.get_caracteres_limpo()
@@ -6,6 +7,9 @@ caracteres_limpos = camada_entrada.get_caracteres_limpo()
 # poder treinar essa linha
 for caracter in caracteres_limpos:
     rn.treinar(caracter)
+
+test = Mapper()
+print(test.files[1]['value'])
 
 
 
