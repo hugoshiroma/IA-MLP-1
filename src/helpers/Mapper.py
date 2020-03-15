@@ -3,7 +3,7 @@ import csv
 import pathlib
 import src.env
 
-inputsDir = pathlib.Path(__file__).parent.parent.absolute().joinpath(pathlib.PurePosixPath('inputs'))
+inputsDir = pathlib.Path(__file__).parent.parent.parent.absolute().joinpath(pathlib.PurePosixPath('inputs'))
 inputLength = src.env.INPUT_LENGTH
 
 
