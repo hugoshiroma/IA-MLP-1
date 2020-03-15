@@ -1,4 +1,4 @@
-from src import rede_neural as rn, camada_entrada
+from src import Rede as rn, camada_entrada
 from src.helpers.Mapper import Mapper
 
 
