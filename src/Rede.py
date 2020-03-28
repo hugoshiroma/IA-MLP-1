@@ -2,10 +2,11 @@ import numpy as np
 
 class Rede:
     def __init__(self, camada_entrada, tam_camada_escondida, tam_camada_saida, num_epocas, func_ativacao):
-        self.a = np.random.random()
+        self.a = 0.85
         self.camada_entrada = camada_entrada
         self.matriz_pesos = []
         self.nova_matriz_pesos = []
+        self.camada_saida = []
         self.tam_camada_escondida = tam_camada_escondida
         self.tam_camada_saida = tam_camada_saida
         self.num_epocas = num_epocas
@@ -26,8 +27,9 @@ class Rede:
 
             bias = np.random.random()
             entradas.append(bias)
-            self.criar_pesos(len(entradas), self.matriz_pesos, self.tam_camada_escondida)
-            self.criar_pesos(self.tam_camada_escondida, self.nova_matriz_pesos, self.tam_camada_saida)
+            if len(self.matriz_pesos)==0:
+                self.criar_pesos(len(entradas), self.matriz_pesos, self.tam_camada_escondida)
+                self.criar_pesos(self.tam_camada_escondida, self.nova_matriz_pesos, self.tam_camada_saida)
 
             # print("Taxa de aprendizado da rede:", self.a)
             # print("Target:", target)
@@ -39,9 +41,9 @@ class Rede:
             #     i += 1
             # print()
 
-            self.feedforward(entradas, self.matriz_pesos)
-            self.backpropagation()
-            self.ajustar_pesos()
+            self.feedforward(entradas, self.matriz_pesos, target)
+            self.backpropagation(target)
+            # self.ajustar_pesos()
 
         # aqui imagino que o treinar devera retornar o valor dos pesos, o treinamento é feito nessa função
 
@@ -52,13 +54,9 @@ class Rede:
                 peso = np.random.random()
                 pesos.append(peso)
             matriz_pesos.append(pesos)
-
-
-        test = 1
-
             # na linha acima, colocamos os pesos para cada entrada x em relacao ao neuronio i da cama_escondida
 
-    def feedforward(self, entradas, matriz_pesos, podeIterar = True):
+    def feedforward(self, entradas, matriz_pesos, letra, podeIterar = True):
         # e se for com dicts?
         camada_escondida = []
         soma = 0
@@ -68,27 +66,55 @@ class Rede:
             camada_escondida.append(self.aplicar_funcao_ativacao(soma))
         # self.aplicar_funcao_ativacao(self, camada_escondida)
         if podeIterar:
-            self.feedforward(camada_escondida, self.nova_matriz_pesos, False)
+            self.feedforward(camada_escondida, self.nova_matriz_pesos, letra, False)
         else:
-            camada_saida = camada_escondida
-            self.calcular_deltinha(camada_escondida)
-            print(camada_saida)
+            self.a = self.a / 2
+            self.camada_saida = camada_escondida
+
 
     def aplicar_funcao_ativacao(self, v):
         return 1/(1+np.exp((-self.a)*v))
 
-    def calcular_deltinha(self, camada):
+    def aplicar_funcao_ativacao_derivada(self, v):
+        return np.exp(-v)/((1 + np.exp(-v))**2)
+
+    def calcular_deltinha(self, camada, letra):
         deltinhas = []
-        for valor in camada:
+        switcher = {
+            'A': [
+                1, -1, -1, -1, -1, -1, -1
+            ],
+            'B': [
+                -1, 1, -1, -1, -1, -1, -1
+            ],
+            'C': [
+                -1, -1, 1, -1, -1, -1, -1
+            ],
+            'D': [
+                -1, -1, -1, 1, -1, -1, -1
+            ],
+            'E': [
+                -1, -1, -1, -1, 1, -1, -1
+            ],
+            'J': [
+                -1, -1, -1, -1, -1, 1, -1
+            ],
+            'K': [
+                -1, -1, -1, -1, -1, -1, 1
+            ]
+        }
+        soma = 0
+        for neuronio in camada:
+            deltinhas.append((switcher.get(letra)[soma] - neuronio) * self.aplicar_funcao_ativacao_derivada(neuronio))
+            soma += 1
+        return deltinhas
 
-        print(deltinhas)
+    def backpropagation(self, letra):
+        matriz_erros = self.calcular_deltinha(self.camada_saida, letra)
+        print(matriz_erros)
 
-
-    def backpropagation(self):
-        return
-
-    def ajustar_pesos(self):
-        return
+    # def ajustar_pesos(self):
+    #     return
 
 
 
