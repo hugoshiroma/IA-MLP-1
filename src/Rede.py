@@ -4,10 +4,13 @@ class Rede:
     def __init__(self, camada_entrada, tam_camada_escondida, tam_camada_saida, num_epocas, func_ativacao):
         self.a = np.random.random()
         self.camada_entrada = camada_entrada
+        self.matriz_pesos = []
+        self.nova_matriz_pesos = []
         self.tam_camada_escondida = tam_camada_escondida
         self.tam_camada_saida = tam_camada_saida
         self.num_epocas = num_epocas
         self.func_ativacao = func_ativacao
+        self.podeIterar = False
 
     # por enquanto estou considerando que sempre será mandado uma lista onde o último item é a resposta esperada
     def treinar(self):
@@ -22,8 +25,9 @@ class Rede:
             entradas = caracter[:-1] #s
 
             bias = np.random.random()
-            matriz_pesos = [] # a matriz aqui será uma lista de listas
-            self.criar_pesos(entradas, matriz_pesos)
+            entradas.append(bias)
+            self.criar_pesos(len(entradas), self.matriz_pesos, self.tam_camada_escondida)
+            self.criar_pesos(self.tam_camada_escondida, self.nova_matriz_pesos, self.tam_camada_saida)
 
             # print("Taxa de aprendizado da rede:", self.a)
             # print("Target:", target)
@@ -35,23 +39,26 @@ class Rede:
             #     i += 1
             # print()
 
-            self.feedforward(entradas, matriz_pesos)
+            self.feedforward(entradas, self.matriz_pesos)
             self.backpropagation()
             self.ajustar_pesos()
 
         # aqui imagino que o treinar devera retornar o valor dos pesos, o treinamento é feito nessa função
 
-    def criar_pesos(self, entradas, matriz_pesos):
-        for neuronio_escondido in range(self.tam_camada_escondida):
+    def criar_pesos(self, tam_entradas, matriz_pesos, tam_prox_camada):
+        for neuronio_escondido in range(tam_prox_camada):
             pesos = []
-            for x in range(len(entradas)):
+            for x in range(tam_entradas):
                 peso = np.random.random()
                 pesos.append(peso)
             matriz_pesos.append(pesos)
 
+
+        test = 1
+
             # na linha acima, colocamos os pesos para cada entrada x em relacao ao neuronio i da cama_escondida
 
-    def feedforward(self, entradas, matriz_pesos):
+    def feedforward(self, entradas, matriz_pesos, podeIterar = True):
         # e se for com dicts?
         camada_escondida = []
         soma = 0
@@ -59,10 +66,23 @@ class Rede:
             for peso in pesos_neuronio:
                 soma += float(entradas[pesos_neuronio.index(peso)]) * peso
             camada_escondida.append(self.aplicar_funcao_ativacao(soma))
-        print(camada_escondida)
+        # self.aplicar_funcao_ativacao(self, camada_escondida)
+        if podeIterar:
+            self.feedforward(camada_escondida, self.nova_matriz_pesos, False)
+        else:
+            camada_saida = camada_escondida
+            self.calcular_deltinha(camada_escondida)
+            print(camada_saida)
 
     def aplicar_funcao_ativacao(self, v):
         return 1/(1+np.exp((-self.a)*v))
+
+    def calcular_deltinha(self, camada):
+        deltinhas = []
+        for valor in camada:
+
+        print(deltinhas)
+
 
     def backpropagation(self):
         return
