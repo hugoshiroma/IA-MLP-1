@@ -1,43 +1,32 @@
-import os
 import csv
-import pathlib
-import src.env
-
-inputsDir = pathlib.Path(__file__).parent.parent.parent.absolute().joinpath(pathlib.PurePosixPath('inputs'))
-inputLength = src.env.INPUT_LENGTH
+from src.env import ARQUIVO_DE_LEITURA
 
 
 class Mapper:
-    def __init__(self, input_folder='Part-1'):
-        self._files = self.handle_input(self, input_folder)
+    def __init__(self):
+        self._arquivo = self.handle_input()
 
     @staticmethod
-    def handle_input(self, input_folder):
+    def handle_input():
         result = []
-        for dirs, subdir, files in os.walk(inputsDir):
-            for file in files:
-                file_path = '../inputs/' + input_folder + '/' + file
-                with open(file_path, 'rt', encoding="utf-8-sig") as data:
-                    file_data = csv.reader(data)
-                    for line in file_data:
-                        if line[-1].isalpha():
-                            char_line = 1
-                            letter = line[-1]
-                            char_matrix = []
-                            while char_line <= 7:
-                                char_matrix.append(line[(char_line - 1) * inputLength:char_line * inputLength])
-                                char_line += 1
-                            result.append({
-                                'index': letter,
-                                'value': char_matrix
-                            })
+        caminho_arquivo = '../inputs/' + ARQUIVO_DE_LEITURA
+        with open(caminho_arquivo, 'rt', encoding="utf-8-sig") as data:
+            dados_arquivo = csv.reader(data)
+            for linha in dados_arquivo:
+                if linha[-1].isalpha():
+                    letra = linha[-1]
+                    dados_letra = linha[0:len(linha)-1]
+                    result.append({
+                        'i': letra,
+                        'valor': dados_letra
+                    })
         return result
         
     @property
-    def files(self):
-        return self._files
+    def arquivo(self):
+        return self._arquivo
 
-    @files.setter
-    def files(self, value):
-        self._files = value
+    @arquivo.setter
+    def arquivo(self, value):
+        self._arquivo = value
 
