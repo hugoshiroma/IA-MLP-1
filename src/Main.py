@@ -5,7 +5,7 @@ from src.structures.RedeNeural import RedeNeural
 inputs = Mapper().arquivo
 rede_neural = RedeNeural()
 for input in inputs:
-    rede_neural.feed_forward(input['i'], input['valor'])
+    rede_neural.treinar(input['i'], input['valor'])
     # tam_camada_escondida = 2
     # tam_camada_saida = 7
     # num_epocas = 100

@@ -28,6 +28,10 @@ class Perceptron:
         return 1 / (1 + np.exp((-TAXA_DE_APRENDIZADO) * valor))
 
     @staticmethod
+    def aplicar_funcao_ativacao_derivada(valor):
+        return np.exp(-valor) / ((1 + np.exp(-valor))**2)
+
+    @staticmethod
     def __inicializar_pesos(camada):
         pesos = []
 
@@ -40,3 +44,6 @@ class Perceptron:
             for i in range(NUMERO_DE_NOS_CAMADA_ESCONDIDA):
                 pesos.append(np.random.random())
             return pesos
+
+    def __ajustar_pesos(self):
+        return

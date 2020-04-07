@@ -11,12 +11,14 @@
       <w>caminho</w>
       <w>caracteres</w>
       <w>dados</w>
+      <w>derivada</w>
       <w>diretorio</w>
       <w>diretorios</w>
       <w>entrada</w>
       <w>entradas</w>
       <w>epoca</w>
       <w>epocas</w>
+      <w>erro</w>
       <w>escondida</w>
       <w>escondidas</w>
       <w>funcao</w>
@@ -28,11 +30,14 @@
       <w>limpos</w>
       <w>linha</w>
       <w>matriz</w>
+      <w>novo</w>
       <w>numero</w>
       <w>perceptron</w>
+      <w>respostas</w>
       <w>saida</w>
       <w>subdiretorios</w>
       <w>taxa</w>
+      <w>treinar</w>
     </words>
   </dictionary>
 </component>
