@@ -10,6 +10,8 @@
       <w>camada</w>
       <w>caminho</w>
       <w>caracteres</w>
+      <w>correcao</w>
+      <w>corrigir</w>
       <w>dados</w>
       <w>derivada</w>
       <w>diretorio</w>
@@ -19,6 +21,7 @@
       <w>epoca</w>
       <w>epocas</w>
       <w>erro</w>
+      <w>erros</w>
       <w>escondida</w>
       <w>escondidas</w>
       <w>funcao</w>
@@ -35,9 +38,11 @@
       <w>perceptron</w>
       <w>respostas</w>
       <w>saida</w>
+      <w>soma</w>
       <w>subdiretorios</w>
       <w>taxa</w>
       <w>treinar</w>
+      <w>variacao</w>
     </words>
   </dictionary>
 </component>
