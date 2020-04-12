@@ -6,6 +6,7 @@ import numpy as np
 
 class Perceptron:
     def __init__(self, camada):
+        self.entrada = 0
         self.entrada_total = 0
         self.pesos_entrada = self.__inicializar_pesos(camada)
         self.saida = 0
@@ -14,17 +15,19 @@ class Perceptron:
         entrada_total = 0
         for entrada in entradas:
             if not isinstance(entrada, Perceptron):
+                self.entrada = entrada
                 entrada_total += float(entrada) * self.pesos_entrada[entradas.index(entrada)]
                 entrada_total = entrada_total + BIAS
             else:
+                self.entrada = entrada.saida
                 entrada_total += entrada.saida * self.pesos_entrada[entradas.index(entrada)]
         self.entrada_total = entrada_total
 
     def calcular_saida(self):
-        self.saida = self.__aplicar_funcao_ativacao(self.entrada_total)
+        self.saida = self.aplicar_funcao_ativacao(self.entrada_total)
 
     @staticmethod
-    def __aplicar_funcao_ativacao(valor):
+    def aplicar_funcao_ativacao(valor):
         return 1 / (1 + np.exp((-TAXA_DE_APRENDIZADO) * valor))
 
     @staticmethod
@@ -36,8 +39,8 @@ class Perceptron:
         pesos = []
 
         if camada is 'cam_entrada':
-            for i in range(NUMERO_DE_NOS_CAMADA_ENTRADA):
-                pesos.append(np.random.uniform(low=-1, high=1))
+            for i in range(NUMERO_DE_NOS_CAMADA_ENTRADA + 1):
+                pesos.append(np.random.random())
             return pesos
 
         if camada is 'cam_escondida' or 'cam_saida':

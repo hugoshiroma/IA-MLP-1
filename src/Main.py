@@ -11,10 +11,4 @@ for epoca in range(NUMERO_DE_EPOCAS):
 
 for perceptron in rede_neural.camada_saida:
     print('saida', rede_neural.camada_saida.index(perceptron))
-    print(perceptron.saida)
-
-for perceptron in rede_neural.camada_saida:
-    print('perceptron', rede_neural.camada_saida.index(perceptron))
-    for peso in perceptron.pesos_entrada:
-        print('peso', perceptron.pesos_entrada.index(peso))
-        print(peso)
+    print(perceptron.saida*1000)
