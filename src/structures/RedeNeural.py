@@ -49,9 +49,8 @@ class RedeNeural:
         # correcao_bias = self.__calcular_correcao_bias()
 
         self.__ajustar_pesos(self.camada_saida, correcao_pesos[-1])
-        self.__ajustar_pesos(self.camadas_escondidas, correcao_pesos[camada])
-
-        print('')
+        for camada in range(len(self.camadas_escondidas), -1, -1):
+            self.__ajustar_pesos(self.camadas_escondidas[camada-1], correcao_pesos[camada-1])
 
     @staticmethod
     def __calcular_informacao_erro(self, camada, erros_entrada=[]):
@@ -59,8 +58,8 @@ class RedeNeural:
         if camada is self.camada_saida:
             for perceptron in range(len(camada)):
                 resposta_esperada = RESPOSTAS_ARQUIVO_DE_LEITURA.get(self.target)[perceptron]
-                somatorio = self.__calcular_somatorio_saidas_e_pesos(self, self.camadas_escondidas[0], perceptron)
-                info_erro = (resposta_esperada - camada[perceptron].saida) * camada[perceptron].aplicar_funcao_ativacao_derivada(somatorio)
+                # somatorio = self.__calcular_somatorio_saidas_e_pesos(self, self.camadas_escondidas[0], perceptron)
+                info_erro = (resposta_esperada - camada[perceptron].saida) * camada[perceptron].aplicar_funcao_ativacao_derivada(camada[perceptron].entrada_total)
                 erros.append(info_erro)
             return erros
         else:
@@ -81,19 +80,12 @@ class RedeNeural:
         return resp
 
     @staticmethod
-    def __calcular_correcao_pesos(self, camada, erros):
-        if camada is self.camada_saida:
-            correcao_de_pesos = []
-            for perceptron in range(len(camada)):
-                correcao_de_peso = TAXA_DE_APRENDIZADO * erros[perceptron] * float(camada[perceptron].saida)
-                correcao_de_pesos.append(correcao_de_peso)
-            return correcao_de_pesos
-        else:
-            correcao_de_pesos = []
-            for perceptron in range(len(camada)):
-                correcao_de_peso = TAXA_DE_APRENDIZADO * erros[perceptron] * float(camada[perceptron].entrada)
-                correcao_de_pesos.append(correcao_de_peso)
-            return correcao_de_pesos
+    def __calcular_correcao_pesos(self, camada, perceptron_iterando, erros):
+        correcao_de_pesos = []
+        for perceptron in range(len(camada)):
+            correcao_de_peso = TAXA_DE_APRENDIZADO * erros[perceptron] * float(camada[perceptron].saida)
+            correcao_de_pesos.append(correcao_de_peso)
+        return correcao_de_pesos
 
     # @staticmethod
     # def __calcular_correcao_bias(camada, erros):
@@ -103,19 +95,17 @@ class RedeNeural:
     #         correcao_de_bias.append(correcao_de_bias)
     #     return correcao_de_bias
 
-    def __ajustar_pesos(self, camadas, correcao_pesos):
-        if camadas is self.camada_saida:
-            for perceptron in camadas:
+    def __ajustar_pesos(self, camada, correcao_pesos):
+        if camada is self.camada_saida:
+            for perceptron in camada:
                 for peso in range(len(perceptron.pesos_entrada)):
-                    novo_peso = perceptron.pesos_entrada[peso] + correcao_pesos[camadas.index(perceptron)]
+                    novo_peso = float(perceptron.pesos_entrada[peso]) + float(correcao_pesos[camada.index(perceptron)])
                     perceptron.pesos_entrada[peso] = novo_peso
         else:
-            for camada in camadas:
-                for perceptron in camada:
-                    for peso in range(len(perceptron.pesos_entrada)):
-                        test = ("%.40f" % correcao_pesos[camada.index(perceptron)])
-                        novo_peso = perceptron.pesos_entrada[peso] + float(test)
-                        perceptron.pesos_entrada[peso] = novo_peso
+            for perceptron in camada:
+                for peso in range(len(perceptron.pesos_entrada)):
+                    novo_peso = float(perceptron.pesos_entrada[peso]) + float(correcao_pesos[camada.index(perceptron)])
+                    perceptron.pesos_entrada[peso] = novo_peso
 
     @staticmethod
     def __inicializar_camada(camada):

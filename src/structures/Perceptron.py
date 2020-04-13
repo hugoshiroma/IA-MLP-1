@@ -15,11 +15,9 @@ class Perceptron:
         entrada_total = 0
         if not isinstance(entradas[0], Perceptron):
             for entrada in range(len(entradas)):
-                self.entrada = entradas[entrada]
                 entrada_total += float(entradas[entrada]) * self.pesos_entrada[entrada]
         else:
             for entrada in range(len(entradas)):
-                self.entrada = entradas[entrada].saida
                 entrada_total += entradas[entrada].saida * self.pesos_entrada[entrada]
         self.entrada_total = entrada_total + BIAS
 
