@@ -63,7 +63,7 @@ class Rede:
         for pesos_neuronio in matriz_pesos:
             for peso in pesos_neuronio:
                 soma += float(entradas[pesos_neuronio.index(peso)]) * peso
-            camada_escondida.append(self.aplicar_funcao_ativacao(soma))
+            camada_escondida.append(self.aplicar_funcao_ativacao(self, soma))
         # self.aplicar_funcao_ativacao(self, camada_escondida)
         if podeIterar:
             self.feedforward(camada_escondida, self.nova_matriz_pesos, letra, False)

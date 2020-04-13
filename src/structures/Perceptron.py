@@ -13,26 +13,25 @@ class Perceptron:
 
     def calcular_entrada_total(self, entradas):
         entrada_total = 0
-        for entrada in entradas:
-            if not isinstance(entrada, Perceptron):
-                self.entrada = entrada
-                entrada_total += float(entrada) * self.pesos_entrada[entradas.index(entrada)]
-                entrada_total = entrada_total + BIAS
-            else:
-                self.entrada = entrada.saida
-                entrada_total += entrada.saida * self.pesos_entrada[entradas.index(entrada)]
-        self.entrada_total = entrada_total
+        if not isinstance(entradas[0], Perceptron):
+            for entrada in range(len(entradas)):
+                self.entrada = entradas[entrada]
+                entrada_total += float(entradas[entrada]) * self.pesos_entrada[entrada]
+        else:
+            for entrada in range(len(entradas)):
+                self.entrada = entradas[entrada].saida
+                entrada_total += entradas[entrada].saida * self.pesos_entrada[entrada]
+        self.entrada_total = entrada_total + BIAS
 
     def calcular_saida(self):
         self.saida = self.aplicar_funcao_ativacao(self.entrada_total)
 
     @staticmethod
     def aplicar_funcao_ativacao(valor):
-        return 1 / (1 + np.exp((-TAXA_DE_APRENDIZADO) * valor))
+        return 1 / (1 + np.exp(-valor))
 
-    @staticmethod
-    def aplicar_funcao_ativacao_derivada(valor):
-        return np.exp(-valor) / ((1 + np.exp(-valor))**2)
+    def aplicar_funcao_ativacao_derivada(self, valor):
+        return self.aplicar_funcao_ativacao(valor) * (1 - self.aplicar_funcao_ativacao(valor))
 
     @staticmethod
     def __inicializar_pesos(camada):
