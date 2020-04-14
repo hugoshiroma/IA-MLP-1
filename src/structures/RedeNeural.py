@@ -2,7 +2,8 @@ from src.structures.Perceptron import Perceptron
 
 
 class RedeNeural:
-    def __init__(self, taxa_aprendizado, num_nos_camada_entrada, num_camadas_escondidas, num_nos_camada_escondida, num_nos_camada_saida):
+    def __init__(self, taxa_aprendizado, num_nos_camada_entrada, num_camadas_escondidas,
+                 num_nos_camada_escondida, num_nos_camada_saida):
         self.target = ''
         self.camada_entrada = []
         self.taxa_aprendizado = taxa_aprendizado
@@ -13,12 +14,12 @@ class RedeNeural:
         self.camadas_escondidas = self.__inicializar_camada('escondida')
         self.camada_saida = self.__inicializar_camada('saida')
 
-    def treinar(self, letra, valor_entrada):
-
-        self.target = letra
-        self.camada_entrada = valor_entrada
-        self.feedforward()
-        self.backpropagation()
+    def treinar(self, epocas, target, sample):
+        for epoca in range(epocas):
+            self.target = target
+            self.camada_entrada = sample
+            self.feedforward()
+            self.backpropagation()
 
     def feedforward(self):
         for camada in range(self.num_camadas_escondidas):
