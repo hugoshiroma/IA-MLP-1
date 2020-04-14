@@ -1,26 +1,28 @@
-from src.env import NUMERO_DE_NOS_CAMADA_ESCONDIDA, NUMERO_DE_CAMADAS_ESCONDIDAS, NUMERO_DE_NOS_CAMADA_SAIDA, \
-    NUMERO_DE_EPOCAS, RESPOSTAS_ARQUIVO_DE_LEITURA, TAXA_DE_APRENDIZADO, BIAS
 from src.structures.Perceptron import Perceptron
 
+
 class RedeNeural:
-    def __init__(self):
+    def __init__(self, taxa_aprendizado, num_nos_camada_entrada, num_camadas_escondidas, num_nos_camada_escondida, num_nos_camada_saida):
         self.target = ''
         self.camada_entrada = []
-        self.taxa_aprendizado = 0
+        self.taxa_aprendizado = taxa_aprendizado
+        self.num_nos_camada_entrada = num_nos_camada_entrada
+        self.num_camadas_escondidas = num_camadas_escondidas
+        self.num_nos_camada_escondida = num_nos_camada_escondida
+        self.num_nos_camada_saida = num_nos_camada_saida
         self.camadas_escondidas = self.__inicializar_camada('escondida')
         self.camada_saida = self.__inicializar_camada('saida')
 
     def treinar(self, letra, valor_entrada):
+
         self.target = letra
         self.camada_entrada = valor_entrada
-
         self.feedforward()
-
         self.backpropagation()
 
     def feedforward(self):
-        for camada in range(NUMERO_DE_CAMADAS_ESCONDIDAS):
-            for perceptron in range(NUMERO_DE_NOS_CAMADA_ESCONDIDA):
+        for camada in range(self.num_camadas_escondidas):
+            for perceptron in range(self.num_nos_camada_escondida):
                 if camada is 0:
                     self.camadas_escondidas[camada][perceptron].calcular_entrada_total(self.camada_entrada)
                     self.camadas_escondidas[camada][perceptron].calcular_saida()
@@ -28,8 +30,8 @@ class RedeNeural:
                     self.camadas_escondidas[camada][perceptron].calcular_entrada_total(self.camadas_escondidas[camada-1])
                     self.camadas_escondidas[camada][perceptron].calcular_saida()
 
-            if camada is NUMERO_DE_CAMADAS_ESCONDIDAS-1:
-                for perceptron in range(NUMERO_DE_NOS_CAMADA_SAIDA):
+            if camada is self.num_camadas_escondidas-1:
+                for perceptron in range(self.num_nos_camada_saida):
                     self.camada_saida[perceptron].calcular_entrada_total(self.camadas_escondidas[camada])
                     self.camada_saida[perceptron].calcular_saida()
 
@@ -57,7 +59,7 @@ class RedeNeural:
         erros = []
         if camada is self.camada_saida:
             for perceptron in range(len(camada)):
-                resposta_esperada = RESPOSTAS_ARQUIVO_DE_LEITURA.get(self.target)[perceptron]
+                resposta_esperada = self.target[perceptron]
                 info_erro = (resposta_esperada - camada[perceptron].saida) * camada[perceptron].aplicar_funcao_ativacao_derivada(camada[perceptron].entrada_total)
                 erros.append(info_erro)
         elif camada is self.camadas_escondidas[-1]:
@@ -79,14 +81,14 @@ class RedeNeural:
             for perceptron_escondido in self.camadas_escondidas[-1]:
                 correcao_de_pesos_perceptron_iterando = []
                 for perceptron_saida in range(len(camada)):
-                    correcao_de_peso = TAXA_DE_APRENDIZADO * float(erros[perceptron_saida]) * float(perceptron_escondido.saida)
+                    correcao_de_peso = self.taxa_aprendizado * float(erros[perceptron_saida]) * float(perceptron_escondido.saida)
                     correcao_de_pesos_perceptron_iterando.append(correcao_de_peso)
                 correcao_de_pesos.append(correcao_de_pesos_perceptron_iterando)
         elif camada is self.camadas_escondidas[-1]:
             for entrada in self.camada_entrada:
                 correcao_de_pesos_perceptron_iterando = []
                 for perceptron_escondido in range(len(camada)):
-                    correcao_de_peso = TAXA_DE_APRENDIZADO * float(erros[perceptron_escondido]) * float(entrada)
+                    correcao_de_peso = self.taxa_aprendizado * float(erros[perceptron_escondido]) * float(entrada)
                     correcao_de_pesos_perceptron_iterando.append(correcao_de_peso)
                 correcao_de_pesos.append(correcao_de_pesos_perceptron_iterando)
         return correcao_de_pesos
@@ -95,7 +97,7 @@ class RedeNeural:
     # def __calcular_correcao_bias(camada, erros):
     #     correcao_de_bias = []
     #     for perceptron in range(len(camada)):
-    #         correcao_de_bias = TAXA_DE_APRENDIZADO * erros[perceptron]
+    #         correcao_de_bias = self.taxa_aprendizado * erros[perceptron]
     #         correcao_de_bias.append(correcao_de_bias)
     #     return correcao_de_bias
 
@@ -111,24 +113,24 @@ class RedeNeural:
                     novo_peso = float(perceptron.pesos_entrada[peso]) + float(correcao_pesos[peso][camada.index(perceptron)])
                     perceptron.pesos_entrada[peso] = novo_peso
 
-    @staticmethod
-    def __inicializar_camada(camada):
+    # TODO: (Bel) deixei o método não estático pra poder utilizar outros atributos dessa classe
+    def __inicializar_camada(self, camada):
         if camada is 'escondida':
             camada_escondida = []
-            for camada in range(NUMERO_DE_CAMADAS_ESCONDIDAS):
+            for camada in range(self.num_camadas_escondidas):
                 camada_escondida_temp = []
                 if camada is 0:
-                    for perceptron in range(NUMERO_DE_NOS_CAMADA_ESCONDIDA):
-                        camada_escondida_temp.append(Perceptron('cam_entrada'))
+                    for perceptron in range(self.num_nos_camada_escondida):
+                        camada_escondida_temp.append(Perceptron(self.num_nos_camada_entrada))
                     camada_escondida.append(camada_escondida_temp)
                 else:
-                    for perceptron in range(NUMERO_DE_NOS_CAMADA_ESCONDIDA):
-                        camada_escondida_temp.append(Perceptron('cam_escondida'))
+                    for perceptron in range(self.num_nos_camada_escondida):
+                        camada_escondida_temp.append(Perceptron(self.num_nos_camada_escondida))
                     camada_escondida.append(camada_escondida_temp)
             return camada_escondida
 
         elif camada is 'saida':
             camada_saida = []
-            for perceptron in range(NUMERO_DE_NOS_CAMADA_SAIDA):
-                camada_saida.append(Perceptron('cam_saida'))
+            for perceptron in range(self.num_nos_camada_saida):
+                camada_saida.append(Perceptron(self.num_nos_camada_escondida))
             return camada_saida
