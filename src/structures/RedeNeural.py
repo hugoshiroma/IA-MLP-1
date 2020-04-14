@@ -50,7 +50,8 @@ class RedeNeural:
 
         self.__ajustar_pesos(self.camada_saida, correcao_pesos[-1])
         for camada in range(len(self.camadas_escondidas), -1, -1):
-            self.__ajustar_pesos(self.camadas_escondidas[camada-1], correcao_pesos[camada-1])
+            if camada is not 0:
+                self.__ajustar_pesos(self.camadas_escondidas[camada-1], correcao_pesos[camada-1])
 
     @staticmethod
     def __calcular_informacao_erro(self, camada, erros_entrada=[]):
@@ -58,33 +59,39 @@ class RedeNeural:
         if camada is self.camada_saida:
             for perceptron in range(len(camada)):
                 resposta_esperada = RESPOSTAS_ARQUIVO_DE_LEITURA.get(self.target)[perceptron]
-                # somatorio = self.__calcular_somatorio_saidas_e_pesos(self, self.camadas_escondidas[0], perceptron)
                 info_erro = (resposta_esperada - camada[perceptron].saida) * camada[perceptron].aplicar_funcao_ativacao_derivada(camada[perceptron].entrada_total)
+                if info_erro < 0.00005:
+                    info_erro = 0
                 erros.append(info_erro)
-            return erros
-        else:
-            for perceptron in range(len(camada)):
-                soma = 0
-                for erro in erros_entrada:
-                    for peso in camada[perceptron].pesos_entrada:
-                        soma += erro * peso
-                    erro = soma * camada[perceptron].aplicar_funcao_ativacao_derivada(camada[perceptron].entrada_total)
-                erros.append(erro)
-            return erros
+        elif camada is self.camadas_escondidas[-1]:
+            for perceptron_escondido in range(len(camada)):
+                correcao_de_peso = 0
+                for perceptron_saida in camada:
+                    correcao_de_peso += erros_entrada[perceptron_escondido] * float(perceptron_saida.pesos_entrada[perceptron_escondido])
+                correcao_de_peso * camada[perceptron_escondido].aplicar_funcao_ativacao_derivada(camada[perceptron_escondido].entrada_total)
+                erros.append(correcao_de_peso)
+
+            # TODO: mais um if para considerar possibilidade de mais camadas
+
+        return erros
 
     @staticmethod
-    def __calcular_somatorio_saidas_e_pesos(self, camada, perceptron_iterando):
-        resp = 0
-        for perceptron in range(len(self.camadas_escondidas[0])):
-            resp += camada[perceptron].saida * self.camada_saida[perceptron_iterando].pesos_entrada[perceptron]
-        return resp
-
-    @staticmethod
-    def __calcular_correcao_pesos(self, camada, perceptron_iterando, erros):
+    def __calcular_correcao_pesos(self, camada, erros):
         correcao_de_pesos = []
-        for perceptron in range(len(camada)):
-            correcao_de_peso = TAXA_DE_APRENDIZADO * erros[perceptron] * float(camada[perceptron].saida)
-            correcao_de_pesos.append(correcao_de_peso)
+        if camada is self.camada_saida:
+            for perceptron_escondido in self.camadas_escondidas[-1]:
+                correcao_de_pesos_perceptron_iterando = []
+                for perceptron_saida in range(len(camada)):
+                    correcao_de_peso = TAXA_DE_APRENDIZADO * erros[perceptron_saida] * float(perceptron_escondido.saida)
+                    correcao_de_pesos_perceptron_iterando.append(correcao_de_peso)
+                correcao_de_pesos.append(correcao_de_pesos_perceptron_iterando)
+        elif camada is self.camadas_escondidas[-1]:
+            for entrada in self.camada_entrada:
+                correcao_de_pesos_perceptron_iterando = []
+                for perceptron_escondido in range(len(camada)):
+                    correcao_de_peso = TAXA_DE_APRENDIZADO * erros[perceptron_escondido] * float(entrada)
+                    correcao_de_pesos_perceptron_iterando.append(correcao_de_peso)
+                correcao_de_pesos.append(correcao_de_pesos_perceptron_iterando)
         return correcao_de_pesos
 
     # @staticmethod
@@ -99,12 +106,12 @@ class RedeNeural:
         if camada is self.camada_saida:
             for perceptron in camada:
                 for peso in range(len(perceptron.pesos_entrada)):
-                    novo_peso = float(perceptron.pesos_entrada[peso]) + float(correcao_pesos[camada.index(perceptron)])
+                    novo_peso = float(perceptron.pesos_entrada[peso]) + float(correcao_pesos[peso][camada.index(perceptron)])
                     perceptron.pesos_entrada[peso] = novo_peso
         else:
             for perceptron in camada:
                 for peso in range(len(perceptron.pesos_entrada)):
-                    novo_peso = float(perceptron.pesos_entrada[peso]) + float(correcao_pesos[camada.index(perceptron)])
+                    novo_peso = float(perceptron.pesos_entrada[peso]) + float(correcao_pesos[peso][camada.index(perceptron)])
                     perceptron.pesos_entrada[peso] = novo_peso
 
     @staticmethod

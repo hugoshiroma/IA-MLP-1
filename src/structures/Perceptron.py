@@ -1,3 +1,5 @@
+import random
+
 from src.env import NUMERO_DE_NOS_CAMADA_ENTRADA, NUMERO_DE_NOS_CAMADA_ESCONDIDA
 from src.env import TAXA_DE_APRENDIZADO
 from src.env import BIAS
@@ -19,7 +21,7 @@ class Perceptron:
         else:
             for entrada in range(len(entradas)):
                 entrada_total += entradas[entrada].saida * self.pesos_entrada[entrada]
-        self.entrada_total = entrada_total + BIAS
+        self.entrada_total = entrada_total
 
     def calcular_saida(self):
         self.saida = self.aplicar_funcao_ativacao(self.entrada_total)
@@ -36,13 +38,13 @@ class Perceptron:
         pesos = []
 
         if camada is 'cam_entrada':
-            for i in range(NUMERO_DE_NOS_CAMADA_ENTRADA + 1):
-                pesos.append(np.random.random())
+            for i in range(NUMERO_DE_NOS_CAMADA_ENTRADA):
+                pesos.append(random.randrange(-1, 1))
             return pesos
 
         if camada is 'cam_escondida' or 'cam_saida':
             for i in range(NUMERO_DE_NOS_CAMADA_ESCONDIDA):
-                pesos.append(np.random.random())
+                pesos.append(random.randrange(-1, 2))
             return pesos
 
     def __ajustar_pesos(self):

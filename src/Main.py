@@ -19,7 +19,6 @@ log_file = open('../logs/Log - ' + time.strftime("%H.%M.%S - %d %m %Y.txt"), "w"
 
 for input in inputs:
     rede_neural.camada_entrada = input['valor']
-    rede_neural.camada_entrada.append(BIAS)
 
     rede_neural.feedforward()
 
