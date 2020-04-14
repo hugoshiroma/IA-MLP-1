@@ -1,5 +1,5 @@
 import csv
-from src.env import ARQUIVO_DE_LEITURA
+from src.env import ARQUIVO_DE_LEITURA_COMPLETO
 
 
 class Mapper:
@@ -9,7 +9,7 @@ class Mapper:
     @staticmethod
     def handle_input():
         result = []
-        caminho_arquivo = '../inputs/' + ARQUIVO_DE_LEITURA
+        caminho_arquivo = '../inputs/' + ARQUIVO_DE_LEITURA_COMPLETO
         with open(caminho_arquivo, 'rt', encoding="utf-8-sig") as data:
             dados_arquivo = csv.reader(data)
             for linha in dados_arquivo:

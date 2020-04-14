@@ -2,11 +2,11 @@ from src.env import NUMERO_DE_NOS_CAMADA_ESCONDIDA, NUMERO_DE_CAMADAS_ESCONDIDAS
     NUMERO_DE_EPOCAS, RESPOSTAS_ARQUIVO_DE_LEITURA, TAXA_DE_APRENDIZADO, BIAS
 from src.structures.Perceptron import Perceptron
 
+
 class RedeNeural:
     def __init__(self):
         self.target = ''
         self.camada_entrada = []
-        self.taxa_aprendizado = 0
         self.camadas_escondidas = self.__inicializar_camada('escondida')
         self.camada_saida = self.__inicializar_camada('saida')
 
@@ -61,14 +61,19 @@ class RedeNeural:
                 info_erro = (resposta_esperada - camada[perceptron].saida) * camada[perceptron].aplicar_funcao_ativacao_derivada(camada[perceptron].entrada_total)
                 erros.append(info_erro)
         elif camada is self.camadas_escondidas[-1]:
-            for perceptron_escondido in range(len(camada)):
-                correcao_de_peso = 0
+            for perceptron_iterando in range(len(camada)):
+                info_erro = 0
                 for perceptron_saida in range(len(self.camada_saida)):
-                    correcao_de_peso += erros_entrada[perceptron_saida] * float(self.camada_saida[perceptron_saida].pesos_entrada[perceptron_escondido])
-                correcao_de_peso * camada[perceptron_escondido].aplicar_funcao_ativacao_derivada(camada[perceptron_escondido].entrada_total)
-                erros.append(correcao_de_peso)
-
-            # TODO: mais um if para considerar possibilidade de mais camadas
+                    info_erro += (erros_entrada[perceptron_saida] * float(self.camada_saida[perceptron_saida].pesos_entrada[perceptron_iterando]))
+                info_erro *= camada[perceptron_iterando].aplicar_funcao_ativacao_derivada(camada[perceptron_iterando].entrada_total)
+                erros.append(info_erro)
+        else:
+            for perceptron_iterando in range(len(camada)):
+                info_erro = 0
+                for perceptron_escondido in range(len(self.camadas_escondidas[self.camadas_escondidas.index(camada)+1])):
+                    info_erro += erros_entrada[perceptron_escondido] * float(self.camadas_escondidas[self.camadas_escondidas.index(camada)+1][perceptron_escondido].pesos_entrada[perceptron_iterando])
+                info_erro *= camada[perceptron_iterando].aplicar_funcao_ativacao_derivada(camada[perceptron_iterando].entrada_total)
+                erros.append(info_erro)
 
         return erros
 
@@ -82,7 +87,7 @@ class RedeNeural:
                     correcao_de_peso = TAXA_DE_APRENDIZADO * float(erros[perceptron_saida]) * float(perceptron_escondido.saida)
                     correcao_de_pesos_perceptron_iterando.append(correcao_de_peso)
                 correcao_de_pesos.append(correcao_de_pesos_perceptron_iterando)
-        elif camada is self.camadas_escondidas[-1]:
+        else:
             for entrada in self.camada_entrada:
                 correcao_de_pesos_perceptron_iterando = []
                 for perceptron_escondido in range(len(camada)):
