@@ -2,7 +2,6 @@ from src.env import NUMERO_DE_NOS_CAMADA_ESCONDIDA, NUMERO_DE_CAMADAS_ESCONDIDAS
     NUMERO_DE_EPOCAS, RESPOSTAS_ARQUIVO_DE_LEITURA, TAXA_DE_APRENDIZADO, BIAS
 from src.structures.Perceptron import Perceptron
 
-
 class RedeNeural:
     def __init__(self):
         self.target = ''
@@ -60,14 +59,12 @@ class RedeNeural:
             for perceptron in range(len(camada)):
                 resposta_esperada = RESPOSTAS_ARQUIVO_DE_LEITURA.get(self.target)[perceptron]
                 info_erro = (resposta_esperada - camada[perceptron].saida) * camada[perceptron].aplicar_funcao_ativacao_derivada(camada[perceptron].entrada_total)
-                if info_erro < 0.00005:
-                    info_erro = 0
                 erros.append(info_erro)
         elif camada is self.camadas_escondidas[-1]:
             for perceptron_escondido in range(len(camada)):
                 correcao_de_peso = 0
-                for perceptron_saida in camada:
-                    correcao_de_peso += erros_entrada[perceptron_escondido] * float(perceptron_saida.pesos_entrada[perceptron_escondido])
+                for perceptron_saida in range(len(self.camada_saida)):
+                    correcao_de_peso += erros_entrada[perceptron_saida] * float(self.camada_saida[perceptron_saida].pesos_entrada[perceptron_escondido])
                 correcao_de_peso * camada[perceptron_escondido].aplicar_funcao_ativacao_derivada(camada[perceptron_escondido].entrada_total)
                 erros.append(correcao_de_peso)
 
@@ -82,14 +79,14 @@ class RedeNeural:
             for perceptron_escondido in self.camadas_escondidas[-1]:
                 correcao_de_pesos_perceptron_iterando = []
                 for perceptron_saida in range(len(camada)):
-                    correcao_de_peso = TAXA_DE_APRENDIZADO * erros[perceptron_saida] * float(perceptron_escondido.saida)
+                    correcao_de_peso = TAXA_DE_APRENDIZADO * float(erros[perceptron_saida]) * float(perceptron_escondido.saida)
                     correcao_de_pesos_perceptron_iterando.append(correcao_de_peso)
                 correcao_de_pesos.append(correcao_de_pesos_perceptron_iterando)
         elif camada is self.camadas_escondidas[-1]:
             for entrada in self.camada_entrada:
                 correcao_de_pesos_perceptron_iterando = []
                 for perceptron_escondido in range(len(camada)):
-                    correcao_de_peso = TAXA_DE_APRENDIZADO * erros[perceptron_escondido] * float(entrada)
+                    correcao_de_peso = TAXA_DE_APRENDIZADO * float(erros[perceptron_escondido]) * float(entrada)
                     correcao_de_pesos_perceptron_iterando.append(correcao_de_peso)
                 correcao_de_pesos.append(correcao_de_pesos_perceptron_iterando)
         return correcao_de_pesos

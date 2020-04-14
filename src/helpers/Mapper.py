@@ -13,13 +13,12 @@ class Mapper:
         with open(caminho_arquivo, 'rt', encoding="utf-8-sig") as data:
             dados_arquivo = csv.reader(data)
             for linha in dados_arquivo:
-                if linha[-1].isalpha():
-                    letra = linha[-1]
-                    dados_letra = linha[0:len(linha)-1]
-                    result.append({
-                        'i': letra,
-                        'valor': dados_letra
-                    })
+                letra = linha[-1]
+                dados_letra = linha[0:len(linha)-1]
+                result.append({
+                    'i': letra,
+                    'valor': dados_letra
+                })
         return result
         
     @property

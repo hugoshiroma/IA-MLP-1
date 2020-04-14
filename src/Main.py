@@ -15,7 +15,7 @@ for epoca in range(NUMERO_DE_EPOCAS):
     for input in inputs:
         rede_neural.treinar(input['i'], input['valor'])
 
-log_file = open('../logs/Log - ' + time.strftime("%H.%M.%S - %d %m %Y.txt"), "w")
+log_file = open('../logs/Log_Saidas - ' + time.strftime("%H.%M.%S - %d %m %Y.txt"), "w")
 
 for input in inputs:
     rede_neural.camada_entrada = input['valor']
@@ -24,6 +24,5 @@ for input in inputs:
 
     log_file.write('\n')
     log_file.write('Letra ' + input['i'] + '\n')
-    logging.info('Camada de saída:')
     for perceptron in rede_neural.camada_saida:
         log_file.write(str(perceptron.saida) + "\n")

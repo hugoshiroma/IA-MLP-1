@@ -39,7 +39,7 @@ class Perceptron:
 
         if camada is 'cam_entrada':
             for i in range(NUMERO_DE_NOS_CAMADA_ENTRADA):
-                pesos.append(random.randrange(-1, 1))
+                pesos.append(random.randrange(-1, 2))
             return pesos
 
         if camada is 'cam_escondida' or 'cam_saida':
