@@ -1,3 +1,9 @@
+"""
+    Essa classe é responsável por mapear os arquivos para teste e arquivos para treino,
+    tratando as respostas esperadas para o problema e gerando dicionarios para melhor manipulá-los
+
+"""
+
 import csv
 from src.env import ARQUIVOS_PARA_TREINO, ARQUIVOS_PARA_TESTE
 
@@ -27,7 +33,9 @@ class Mapper:
             result.append(self.handle_input(arquivo))
         return result
 
-    # TODO: (Bel) deixei o método não estático pra poder utilizar outros métodos dessa classe
+    """
+        O método abaixo transforma os arquivos csvs em dicionários de dados
+    """
     def handle_input(self, filename):
         inputs = []
         caminho_arquivo = '../inputs/Part-1/' + filename
@@ -47,6 +55,10 @@ class Mapper:
                       'inputs': inputs}
         return result
 
+    """
+        O método abaixo retorna a resposta esperada de acordo com um target
+    """
+
     def get_target(self, target):
         dict = {
             'A': [1, -1, -1, -1, -1, -1, -1],
@@ -59,6 +71,10 @@ class Mapper:
             '0': [0],
             '1': [1]
         }
-        # O target dos outros problemas é transformado em lista para que a rede seja
-        # genérica para todos os problemas em questão
+
+        """
+             O target dos outros problemas é transformado em lista para que a rede seja
+            genérica para todos os problemas em questão
+        """
+
         return dict[target]

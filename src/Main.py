@@ -1,23 +1,34 @@
+"""
+    Essa classe é responsável por controlar toda a execução do algoritmo Multi-layer Perceptron,
+    tanto para sua fase treinamento, quanto para sua fase de teste
+"""
 import time
-
 from src.env import NUMERO_DE_EPOCAS, BIAS, TAXA_DE_APRENDIZADO
 from src.helpers.Mapper import Mapper
 from src.structures.RedeNeural import RedeNeural
 
 problemas = Mapper().arquivos
 
-# Para cada dataset mapeado, iremos realizar o treino abaixo,
-# onde cada sample do dataset em questão passa pela rede neural
+"""
+    Para cada problema mapeado, iremos realizar o treino abaixo, onde cada sample do problema em questão passa 
+    pela rede neural e gera logs de seus resultados
+"""
 
 for problema in problemas:
     print(f"treinando {problema['nome_problema']}")
     num_nos_camada_entrada = len(problema['inputs'][0]['sample'])
     num_camadas_escondidas = 1
-    # TODO: Setei o numero de nos na camada escondida como metade do numero de entradas
-    #  só pra ter um padrão, podemos mudar e colocar no dicionario de cada problema
+    """
+         O número de nós na camada escondida é calculado como sendo a metade do numero de entradas, assim, 
+         independente do problema, automaticamente se pode estabelecer esse parâmetro
+         
+    """
     num_nos_camada_escondida = int(len(problema['inputs'][0]['sample']) / 2)
     num_nos_camada_saida = len(problema['inputs'][0]['target'])
 
+    """
+        Para cada problema, uma rede é instanciada de acordo com seus respectivos parâmetros
+    """
     rede_neural = RedeNeural(TAXA_DE_APRENDIZADO,
                              num_nos_camada_entrada,
                              num_camadas_escondidas,
@@ -74,8 +85,10 @@ for problema in problemas:
     log_file.write(f'TAXA DE APRENDIZADO: {TAXA_DE_APRENDIZADO} \n')
     log_file.write(f'NUMERO DE EPOCAS: {NUMERO_DE_EPOCAS} \n')
 
-    # Abaixo um exemplo de teste utilizando os mesmos datasets que treinaram a rede, afim de fazer a
-    # primeira análise das saídas calculadas pela rede
+    """
+        Para testarmos o problema dos caracteres com ruído, iremos fazer a aplicação dele na rede que foi 
+        treinada pelo problema dos caracteres limpos
+    """
     if problema['nome_problema'] == 'caracteres-limpos':
         for input in Mapper().arquivos_teste[0]['inputs']:
             rede_neural.testar(input['target'], input['sample'], input['target_description'])
