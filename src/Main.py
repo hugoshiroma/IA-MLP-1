@@ -1,7 +1,8 @@
 """
-    Essa classe é responsável por controlar toda a execução do algoritmo Multi-layer Perceptron,
-    tanto para sua fase treinamento, quanto para sua fase de teste
+    Classe responsavel por por controlar toda a execução do algoritmo Multi-layer Perceptron, tanto para sua fase
+    treinamento, quanto para sua fase de teste
 """
+
 import time
 from src.env import NUMERO_DE_EPOCAS, BIAS, TAXA_DE_APRENDIZADO
 from src.helpers.Mapper import Mapper
@@ -10,7 +11,7 @@ from src.structures.RedeNeural import RedeNeural
 problemas = Mapper().arquivos
 
 """
-    Para cada problema mapeado, iremos realizar o treino abaixo, onde cada sample do problema em questão passa 
+    Para cada problema mapeado, iremos realizar o treino abaixo, onde cada sample do problema em questao passa 
     pela rede neural e gera logs de seus resultados
 """
 
@@ -19,15 +20,15 @@ for problema in problemas:
     num_nos_camada_entrada = len(problema['inputs'][0]['sample'])
     num_camadas_escondidas = 1
     """
-         O número de nós na camada escondida é calculado como sendo a metade do numero de entradas, assim, 
-         independente do problema, automaticamente se pode estabelecer esse parâmetro
+         O numero de nos na camada escondida e calculado como sendo a metade do numero de entradas, assim, 
+         independente do problema, automaticamente se pode estabelecer esse parametro
          
     """
     num_nos_camada_escondida = int(len(problema['inputs'][0]['sample']) / 2)
     num_nos_camada_saida = len(problema['inputs'][0]['target'])
 
     """
-        Para cada problema, uma rede é instanciada de acordo com seus respectivos parâmetros
+        Para cada problema, uma rede e instanciada de acordo com seus respectivos parametros
     """
     rede_neural = RedeNeural(TAXA_DE_APRENDIZADO,
                              num_nos_camada_entrada,
@@ -86,7 +87,7 @@ for problema in problemas:
     log_file.write(f'NUMERO DE EPOCAS: {NUMERO_DE_EPOCAS} \n')
 
     """
-        Para testarmos o problema dos caracteres com ruído, iremos fazer a aplicação dele na rede que foi 
+        Para testarmos o problema dos caracteres com ruido, iremos fazer a aplicacao dele na rede que foi 
         treinada pelo problema dos caracteres limpos
     """
     if problema['nome_problema'] == 'caracteres-limpos':
