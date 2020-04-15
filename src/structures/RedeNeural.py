@@ -2,12 +2,35 @@ import time
 
 from src.structures.Perceptron import Perceptron
 
+"""
+    Classe responsavel pelos processos da implementacao da Rede Neural*
+    Functions:
+     _init_(self,camada_entrada, tam_camada_escondida, tam_camada_saida, num_epocas, func_ativacao): Inicia os atributos da rede.
+     treinar(self): Funcao que realiza o treinamento da rede, feedfoward e backpropagation.
+     feedforward(self): Responsavel pelo feedforward.
+     backpropagation(self): Responsavel pelo backpropagation acoplado ao ajuste de pesos.
+     __calcular_informacao_erro(self, camada, erros_entrada=[]): Calcula a informacao de erro de acordo com a camada* e com os erros de cada entrada.
+     __calcular_correcao_pesos(self, camada, perceptron_iterando, erros): Calcula a variacao do peso de acordo com o erro calculado e do peso atual da rede.
+     __ajustar_pesos(self, camada, correcao_pesos): Realiza a alteracao dos pesos apos o backpropagation
+     __inicializar_camada(camada): Inicia o processo de inicializacao da camada de acordo com a camada*.
 
+    *camada: de entrada, de saída ou escondida.
+    
+    *Dado que trabalhamos com este formato de perceptron adotado nesta rede, podemos considerar todos os
+    neuronios da camada de saída como classes de perceptrons dado os procedimentos de operação realizados
+    pelo perceptron ser adaptativo para a atender a necessidade dos dois tipos de neurônios
+    (escondido e de saída) em ambos os fluxos (feedforward e backpropagation).
+    
+    A defasagem principal da implementaçao em questao e a falta de uma classe especifica de logger
+    dado que poluiu muito a parte do backpropagation e do proprio Main.
+"""
 class RedeNeural:
     def __init__(self, taxa_aprendizado, num_nos_camada_entrada, num_camadas_escondidas,
                  num_nos_camada_escondida, num_nos_camada_saida):
-        self.target = ''
-        self.problema = ''
+
+        self.target = '' # Variável apenas com criação para log
+        self.problema = '' # Variável apenas com criação para log
+
         self.camada_entrada = []
         self.taxa_aprendizado = taxa_aprendizado
         self.num_nos_camada_entrada = num_nos_camada_entrada
@@ -17,6 +40,11 @@ class RedeNeural:
         self.camadas_escondidas = self.__inicializar_camada('escondida')
         self.camada_saida = self.__inicializar_camada('saida')
 
+    """
+        Algoritmo que centralizar todos os processos internos de treino da rede, do começo ao fim.
+        1. Recebimento das entradas a serem consideradas para treinamento
+        2. Etapa inicial de feedforward, calculando entradas ponderadas e valores de saída
+    """
     def treinar(self, epocas, target, sample, target_description):
         for epoca in range(epocas):
             self.target = target
@@ -24,6 +52,12 @@ class RedeNeural:
             self.feedforward()
             self.backpropagation(target_description)
 
+    """
+        Feedforward que calcula a entrada ponderada de cada perceptron de sua camada escondida e de saida
+        apenas invocando a funçao calcular_entrada_total que se encontra na classe perceptron para seus devidos
+        valores de entrada e, em seguida, invoca o calcular_saida de cada perceptron aplicado a funcao de
+        ativacao
+    """
     def feedforward(self):
         for camada in range(self.num_camadas_escondidas):
             for perceptron in range(self.num_nos_camada_escondida):
@@ -39,6 +73,15 @@ class RedeNeural:
                     self.camada_saida[perceptron].calcular_entrada_total(self.camadas_escondidas[camada])
                     self.camada_saida[perceptron].calcular_saida()
 
+    """
+        método responsável por realizar toda a retropropagaçao de acordo com a rede tendo todas suas
+        entradas ponderadas calculadas para cada percetron junto ao seus valores de saída.
+        O método calcula os erros e armazena todos de forma respectiva a representação gráfica em arrays,
+        de forma que as informaçoes de erro de todos os perceptrons da camada de saida se encontram na posiçao
+        [ultimo indice] do array erros, lembrando que este valor também é um array que contem todos os valores
+        de saida. O mesmo vale para o calculo da correcao de pesos, cujo todos os pesos sao armazenados da mesma
+        forma em array de arrays para recuperaçao posterior facilitada no ajuste do pesos
+    """
     def backpropagation(self, target_description):
         erros = []
         correcao_pesos = []
@@ -76,6 +119,11 @@ class RedeNeural:
             if camada is not 0:
                 self.__ajustar_pesos(self.camadas_escondidas[camada-1], correcao_pesos[camada-1])
 
+    """
+       Metodo responsavel por realizar o teste final simulando a aplicacao de fato dos valores de teste
+       de acordo com o ajuste de pesos e processos feitos no treinamento da rede neural.
+       Sendo apenas a etapa de feedforward e o respectivo log dos resultados. 
+    """
     def testar(self, target, sample, target_description):
         self.target = target
         self.camada_entrada = sample
@@ -88,6 +136,12 @@ class RedeNeural:
             log_file.write(str(perceptron.saida) + "\n")
         log_file.write('\n')
 
+    """
+        Método responsável por calcular a informacao de erro de acordo com a camada recebida.
+        O parâmetro da camada a ser calculada sendo recebido facilita a unicidade e futura chamada 
+        do método para calcular todos os perceptrons de forma a encapsular a iteracao dos perceptrons ao 
+        invés de externalizá-la 
+    """
     @staticmethod
     def __calcular_informacao_erro(self, camada, erros_entrada=[]):
         erros = []
@@ -103,11 +157,13 @@ class RedeNeural:
                     correcao_de_peso += erros_entrada[perceptron_saida] * float(self.camada_saida[perceptron_saida].pesos_entrada[perceptron_escondido])
                 correcao_de_peso * camada[perceptron_escondido].aplicar_funcao_ativacao_derivada(camada[perceptron_escondido].entrada_total)
                 erros.append(correcao_de_peso)
-
-            # TODO: mais um if para considerar possibilidade de mais camadas
-
         return erros
 
+    """
+        Metodo responsavel por calcular a correcao de pesos com iteracao interna entre os perceptrons para calculo
+        unico e armazenamento de forma que seja respectivo aos pesos e camadas a serem ajustados corretamente no futuro
+        pelo acesso do ajuste de pesos
+    """
     @staticmethod
     def __calcular_correcao_pesos(self, camada, erros):
         correcao_de_pesos = []
@@ -127,14 +183,9 @@ class RedeNeural:
                 correcao_de_pesos.append(correcao_de_pesos_perceptron_iterando)
         return correcao_de_pesos
 
-    # @staticmethod
-    # def __calcular_correcao_bias(camada, erros):
-    #     correcao_de_bias = []
-    #     for perceptron in range(len(camada)):
-    #         correcao_de_bias = self.taxa_aprendizado * erros[perceptron]
-    #         correcao_de_bias.append(correcao_de_bias)
-    #     return correcao_de_bias
-
+    """
+        Calculo e ajuste do pesos de acordo com matriz de correcao de pesos previamente calculada
+    """
     def __ajustar_pesos(self, camada, correcao_pesos):
         if camada is self.camada_saida:
             for perceptron in camada:
@@ -147,7 +198,10 @@ class RedeNeural:
                     novo_peso = float(perceptron.pesos_entrada[peso]) + float(correcao_pesos[peso][camada.index(perceptron)])
                     perceptron.pesos_entrada[peso] = novo_peso
 
-    # TODO: (Bel) deixei o método não estático pra poder utilizar outros atributos dessa classe
+    """
+        Inicializacao da camada e de seus respectivos perceptrons de acordo com o numero definido no arquivo Main.
+        A inicializacao aleatoria dos pesos e do objeto Perceptron em si podem ser vistar na classe Perceptron.py
+    """
     def __inicializar_camada(self, camada):
         if camada is 'escondida':
             camada_escondida = []
