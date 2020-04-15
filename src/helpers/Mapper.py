@@ -1,6 +1,13 @@
 """
-    Essa classe é responsável por mapear os arquivos para teste e arquivos para treino,
+    Classe responsavel por fazer o mapeamento dos arquivos .csv para teste e para treino da rede
     tratando as respostas esperadas para o problema e gerando dicionarios para melhor manipulá-los
+
+    Functions:
+        init(self): Inicia a leitura do arquivo.
+        handle_input: Funcao que le o arquivo .csv retornando um dicioncario de dados para ser usado na rede neural.
+        arquivo(self): Funcao que guarda o objeto do retorno da funcao 'handle_input' na variavel _arquivo.
+        arquivo(self,value): Funcao que 'seta' os valores do objeto guardado pela funcao 'arquivo(self)' na variavel _arquivo.
+        get_target(self, target): Funcao que retorna o valor esperado dentro da rede de acordo com o target alfanumerico
 
 """
 
@@ -33,9 +40,6 @@ class Mapper:
             result.append(self.handle_input(arquivo))
         return result
 
-    """
-        O método abaixo transforma os arquivos csvs em dicionários de dados
-    """
     def handle_input(self, filename):
         inputs = []
         caminho_arquivo = '../inputs/Part-1/' + filename
@@ -55,10 +59,6 @@ class Mapper:
                       'inputs': inputs}
         return result
 
-    """
-        O método abaixo retorna a resposta esperada de acordo com um target
-    """
-
     def get_target(self, target):
         dict = {
             'A': [1, -1, -1, -1, -1, -1, -1],
@@ -73,8 +73,8 @@ class Mapper:
         }
 
         """
-             O target dos outros problemas é transformado em lista para que a rede seja
-            genérica para todos os problemas em questão
+             O target dos outros problemas e transformado em lista para que a rede seja
+            generica para todos os problemas em questao
         """
 
         return dict[target]
