@@ -1,10 +1,11 @@
 import csv
-from src.env import ARQUIVOS_PARA_TREINO
+from src.env import ARQUIVOS_PARA_TREINO, ARQUIVOS_PARA_TESTE
 
 
 class Mapper:
     def __init__(self):
         self._arquivos = self.get_multiple_files()
+        self.arquivos_teste = self.get_test_file()
 
     @property
     def arquivos(self):
@@ -17,6 +18,12 @@ class Mapper:
     def get_multiple_files(self):
         result = []
         for arquivo in ARQUIVOS_PARA_TREINO:
+            result.append(self.handle_input(arquivo))
+        return result
+
+    def get_test_file(self):
+        result = []
+        for arquivo in ARQUIVOS_PARA_TESTE:
             result.append(self.handle_input(arquivo))
         return result
 

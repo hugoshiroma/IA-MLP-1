@@ -1,0 +1,116 @@
+CAMADA: cam_saida 
+Perceptron: 1
+Erro: -9.374325139732287e-06
+
+Perceptron: 2
+Erro: -0.00013744079024508233
+
+Perceptron: 3
+Erro: 0.00037415715664090355
+
+Perceptron: 4
+Erro: -0.0002456747042502837
+
+Perceptron: 5
+Erro: -3.7075469092075296e-05
+
+Perceptron: 6
+Erro: -3.062698671757811e-05
+
+Perceptron: 7
+Erro: -0.0011024817103992173
+
+CAMADA: cam_escondida 
+Perceptron: 1
+Erro: -0.0007983853263325896
+
+Perceptron: 2
+Erro: 0.0008340443080229701
+
+Perceptron: 3
+Erro: 0.000752109851293118
+
+Perceptron: 4
+Erro: -0.0013930665954775242
+
+Perceptron: 5
+Erro: -3.899342969376122e-05
+
+Perceptron: 6
+Erro: 0.00038095079635204585
+
+Perceptron: 7
+Erro: 0.0012450935857523523
+
+Perceptron: 8
+Erro: -0.0006980898975546307
+
+Perceptron: 9
+Erro: -0.00018209917109037886
+
+Perceptron: 10
+Erro: 0.0012245959867559148
+
+Perceptron: 11
+Erro: -0.0012825468347634878
+
+Perceptron: 12
+Erro: -0.0013744223383149643
+
+Perceptron: 13
+Erro: -0.0015306075722178367
+
+Perceptron: 14
+Erro: 0.00048055399468147585
+
+Perceptron: 15
+Erro: -0.000552293169271571
+
+Perceptron: 16
+Erro: 0.0011496939175636796
+
+Perceptron: 17
+Erro: -0.0014153130638595965
+
+Perceptron: 18
+Erro: 0.0006747829719512421
+
+Perceptron: 19
+Erro: -0.0012638364873361983
+
+Perceptron: 20
+Erro: 0.0009600201887471501
+
+Perceptron: 21
+Erro: 0.0006037453356314637
+
+Perceptron: 22
+Erro: -0.0016218933422248818
+
+Perceptron: 23
+Erro: 0.0011530279873947593
+
+Perceptron: 24
+Erro: 0.0016295956219964762
+
+Perceptron: 25
+Erro: 0.0013591114972520567
+
+Perceptron: 26
+Erro: -0.000902388971779626
+
+Perceptron: 27
+Erro: -0.0009703311156048529
+
+Perceptron: 28
+Erro: 0.0023730012572489396
+
+Perceptron: 29
+Erro: 0.0008752380286132259
+
+Perceptron: 30
+Erro: 0.0009390042412243049
+
+Perceptron: 31
+Erro: 0.0015051350124309032
+

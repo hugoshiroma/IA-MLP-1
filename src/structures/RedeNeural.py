@@ -76,6 +76,18 @@ class RedeNeural:
             if camada is not 0:
                 self.__ajustar_pesos(self.camadas_escondidas[camada-1], correcao_pesos[camada-1])
 
+    def testar(self, target, sample, target_description):
+        self.target = target
+        self.camada_entrada = sample
+        self.feedforward()
+
+        log_file = open(f"../logs/testes/Log_Saidas {target_description} - {time.strftime('%H.%M.%S - %d %m %Y.txt')}",
+                        "w")
+        log_file.write('Target ' + str(target_description) + '\n')
+        for perceptron in self.camada_saida:
+            log_file.write(str(perceptron.saida) + "\n")
+        log_file.write('\n')
+
     @staticmethod
     def __calcular_informacao_erro(self, camada, erros_entrada=[]):
         erros = []

@@ -76,5 +76,6 @@ for problema in problemas:
 
     # Abaixo um exemplo de teste utilizando os mesmos datasets que treinaram a rede, afim de fazer a
     # primeira análise das saídas calculadas pela rede
-
-
+    if problema['nome_problema'] == 'caracteres-limpos':
+        for input in Mapper().arquivos_teste[0]['inputs']:
+            rede_neural.testar(input['target'], input['sample'], input['target_description'])

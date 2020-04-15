@@ -1,8 +1,0 @@
-CAMADA: cam_saida 
-Perceptron: 1
-Erro: 0.0024804010637137705
-
-CAMADA: cam_escondida 
-Perceptron: 1
-Erro: 0.007574390473949157
-
