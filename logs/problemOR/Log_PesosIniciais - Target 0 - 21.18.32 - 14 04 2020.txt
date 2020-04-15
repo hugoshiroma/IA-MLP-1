@@ -1,0 +1,11 @@
+CAMADA: cam_escondida 
+Perceptron: 1
+Peso [0]: 0
+Peso [0]: 0
+
+CAMADA: cam_saida 
+Perceptron: 1
+Peso [0]: 1
+
+
+Target: 0 

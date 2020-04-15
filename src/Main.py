@@ -25,7 +25,43 @@ for problema in problemas:
                              num_nos_camada_saida)
 
     for input in problema['inputs']:
-        rede_neural.treinar(NUMERO_DE_EPOCAS, input['target'], input['sample'])
+        rede_neural.problema = problema['nome_problema']
+        log_file = open(f"../logs/{problema['nome_problema']}/Log_PesosIniciais - " +
+                        'Target ' + str(input['target_description']) + time.strftime(" - %H.%M.%S - %d %m %Y.txt"), "w")
+        log_file.write('CAMADA: cam_escondida \n')
+        for perceptron in rede_neural.camadas_escondidas[0]:
+            log_file.write('Perceptron: ' + str(rede_neural.camadas_escondidas[0].index(perceptron) + 1) + '\n')
+            for peso in perceptron.pesos_entrada:
+                log_file.write(f'Peso [{perceptron.pesos_entrada.index(peso)}]: {peso}' + "\n")
+            log_file.write('\n')
+        log_file.write('CAMADA: cam_saida \n')
+        for perceptron in rede_neural.camada_saida:
+            log_file.write('Perceptron: ' + str(rede_neural.camada_saida.index(perceptron) + 1) + '\n')
+            for peso in perceptron.pesos_entrada:
+                log_file.write(f'Peso [{perceptron.pesos_entrada.index(peso)}]: {peso}' + "\n")
+            log_file.write('\n')
+
+        rede_neural.treinar(NUMERO_DE_EPOCAS, input['target'], input['sample'], input['target_description'])
+
+        log_file.write('\n')
+        log_file.write(f"Target: {input['target_description']} \n")
+
+        log_file = open(f"../logs/{problema['nome_problema']}/Log_PesosFinais - " +
+                        'Target ' + str(input['target_description']) + time.strftime(" - %H.%M.%S - %d %m %Y.txt"), "w")
+        log_file.write('CAMADA: cam_escondida \n')
+        for perceptron in rede_neural.camadas_escondidas[0]:
+            log_file.write('Perceptron: ' + str(rede_neural.camadas_escondidas[0].index(perceptron) + 1) + '\n')
+            for peso in perceptron.pesos_entrada:
+                log_file.write(f'Peso [{perceptron.pesos_entrada.index(peso)}]: {peso}' + "\n")
+            log_file.write('\n')
+        log_file.write('\n')
+        log_file.write('\n')
+        log_file.write('CAMADA: cam_saida \n')
+        for perceptron in rede_neural.camada_saida:
+            log_file.write('Perceptron: ' + str(rede_neural.camada_saida.index(perceptron) + 1) + '\n')
+            for peso in perceptron.pesos_entrada:
+                log_file.write(f'Peso [{perceptron.pesos_entrada.index(peso)}]: {peso}' + "\n")
+            log_file.write('\n')
 
     log_file = open(
         f"../logs/{problema['nome_problema']}/Log_Parametros_Iniciais - {time.strftime('%H.%M.%S - %d %m %Y.txt')}", "w")
@@ -38,23 +74,7 @@ for problema in problemas:
     log_file.write(f'TAXA DE APRENDIZADO: {TAXA_DE_APRENDIZADO} \n')
     log_file.write(f'NUMERO DE EPOCAS: {NUMERO_DE_EPOCAS} \n')
 
-    log_file = open(f"../logs/{problema['nome_problema']}/Log_Saidas - {time.strftime('%H.%M.%S - %d %m %Y.txt')}", "w")
-
     # Abaixo um exemplo de teste utilizando os mesmos datasets que treinaram a rede, afim de fazer a
     # primeira análise das saídas calculadas pela rede
-
-    for input in problema['inputs']:
-        rede_neural.camada_entrada = input['sample']
-
-        rede_neural.feedforward()
-
-        log_file.write('\n')
-        log_file.write(f"Target: {input['target']} \n")
-        # TODO: Acredito que o log dos pesos vai aqui embaixo
-        # for perceptron in rede_neural.camadas_escondidas[0]:
-        #     print(perceptron.pesos_entrada)
-
-        for perceptron in rede_neural.camada_saida:
-            log_file.write(str(perceptron.saida) + "\n")
 
 

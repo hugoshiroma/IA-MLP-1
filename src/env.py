@@ -1,6 +1,6 @@
 import time
 # ATENCAO: Infos da rede
-TAXA_DE_APRENDIZADO = 0.33
+TAXA_DE_APRENDIZADO = 0.5
 BIAS = 1
 NUMERO_DE_EPOCAS = 200
 

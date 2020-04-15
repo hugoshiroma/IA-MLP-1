@@ -1,0 +1,11 @@
+CAMADA: cam_escondida 
+Perceptron: 1
+Peso [0]: -44.471418744380856
+Peso [1]: -46.9549772846169
+
+
+
+CAMADA: cam_saida 
+Perceptron: 1
+Peso [0]: -3.431321069962519
+
