@@ -1,6 +1,7 @@
 import time
 
 from src.structures.Perceptron import Perceptron
+from src.helpers.Logger import Logger
 
 """
     Classe responsavel pelos processos da implementacao da Rede Neural*
@@ -27,10 +28,6 @@ from src.structures.Perceptron import Perceptron
 class RedeNeural:
     def __init__(self, taxa_aprendizado, num_nos_camada_entrada, num_camadas_escondidas,
                  num_nos_camada_escondida, num_nos_camada_saida):
-
-        self.target = '' # Variável apenas com criação para log
-        self.problema = '' # Variável apenas com criação para log
-
         self.camada_entrada = []
         self.taxa_aprendizado = taxa_aprendizado
         self.num_nos_camada_entrada = num_nos_camada_entrada
@@ -40,17 +37,20 @@ class RedeNeural:
         self.camadas_escondidas = self.__inicializar_camada('escondida')
         self.camada_saida = self.__inicializar_camada('saida')
 
+        self.logger = None
+
     """
-        Algoritmo que centralizar todos os processos internos de treino da rede, do começo ao fim.
+        Algoritmo que centraliza todos os processos internos de treino da rede, do começo ao fim.
         1. Recebimento das entradas a serem consideradas para treinamento
         2. Etapa inicial de feedforward, calculando entradas ponderadas e valores de saída
     """
-    def treinar(self, epocas, target, sample, target_description):
+    def treinar(self, epocas, target_value, sample, target, logger=None):
+        if logger is not None:
+            self.logger = logger
         for epoca in range(epocas):
-            self.target = target
             self.camada_entrada = sample
             self.feedforward()
-            self.backpropagation(target_description)
+            self.backpropagation(target, target_value, epoca)
 
     """
         Feedforward que calcula a entrada ponderada de cada perceptron de sua camada escondida e de saida
@@ -82,37 +82,20 @@ class RedeNeural:
         de saida. O mesmo vale para o calculo da correcao de pesos, cujo todos os pesos sao armazenados da mesma
         forma em array de arrays para recuperaçao posterior facilitada no ajuste do pesos
     """
-    def backpropagation(self, target_description):
+    def backpropagation(self, target, target_value, epoca):
         erros = []
         correcao_pesos = []
 
-        erros.append(self.__calcular_informacao_erro(self, self.camada_saida))
+        erros.append(self.__calcular_informacao_erro(self, self.camada_saida, target_value))
         correcao_pesos.append(self.__calcular_correcao_pesos(self, self.camada_saida, erros[0]))
 
         for camada in range(len(self.camadas_escondidas), -1, -1):
             if camada is not 0:
-                erros.insert(0, self.__calcular_informacao_erro(self, self.camadas_escondidas[camada-1], erros[0]))
+                erros.insert(0, self.__calcular_informacao_erro(self, self.camadas_escondidas[camada-1], target_value, erros[0]))
                 correcao_pesos.insert(0, self.__calcular_correcao_pesos(self, self.camadas_escondidas[camada-1], erros[0]))
 
-        log_file = open(f"../logs/{self.problema}/Log_Erros - " +
-                        'Target ' + str(target_description) + time.strftime(" - %H.%M.%S - %d %m %Y.txt"), "w")
-        log_file.write('CAMADA: cam_saida \n')
-        for perceptron in range(len(erros[-1])):
-            log_file.write('Perceptron: ' + str(perceptron + 1) + '\n')
-            log_file.write(f'Erro: {erros[-1][perceptron]}' + "\n")
-            log_file.write('\n')
-        log_file.write('CAMADA: cam_escondida \n')
-        for perceptron in range(len(erros[0])):
-            log_file.write('Perceptron: ' + str(perceptron + 1) + '\n')
-            log_file.write(f'Erro: {erros[0][perceptron]}' + "\n")
-            log_file.write('\n')
-
-        log_file = open(f"../logs/{self.problema}/Log_Saidas - {time.strftime('%H.%M.%S - %d %m %Y.txt')}",
-                        "w")
-        log_file.write('Target ' + str(target_description) + '\n')
-        for perceptron in self.camada_saida:
-            log_file.write(str(perceptron.saida) + "\n")
-        log_file.write('\n')
+        if self.logger is not None:
+            self.logger.log_outputs(self, target, erros, epoca)
 
         self.__ajustar_pesos(self.camada_saida, correcao_pesos[-1])
         for camada in range(len(self.camadas_escondidas), -1, -1):
@@ -124,17 +107,16 @@ class RedeNeural:
        de acordo com o ajuste de pesos e processos feitos no treinamento da rede neural.
        Sendo apenas a etapa de feedforward e o respectivo log dos resultados. 
     """
-    def testar(self, target, sample, target_description):
-        self.target = target
+    def testar(self, sample, target, logger):
         self.camada_entrada = sample
         self.feedforward()
 
-        log_file = open(f"../logs/testes/Log_Saidas {target_description} - {time.strftime('%H.%M.%S - %d %m %Y.txt')}",
-                        "w")
-        log_file.write('Target ' + str(target_description) + '\n')
-        for perceptron in self.camada_saida:
-            log_file.write(str(perceptron.saida) + "\n")
-        log_file.write('\n')
+        if logger is not None:
+            logger.log_line(f'Target {str(target)}')
+            for perceptron in self.camada_saida:
+                logger.log_line(f'Perceptron {str(self.camada_saida.index(perceptron))}')
+                logger.log_line(f'Saida: {str(perceptron.saida)}')
+            logger.log_line()
 
     """
         Método responsável por calcular a informacao de erro de acordo com a camada recebida.
@@ -143,11 +125,11 @@ class RedeNeural:
         invés de externalizá-la 
     """
     @staticmethod
-    def __calcular_informacao_erro(self, camada, erros_entrada=[]):
+    def __calcular_informacao_erro(self, camada, target=None, erros_entrada=[]):
         erros = []
         if camada is self.camada_saida:
             for perceptron in range(len(camada)):
-                resposta_esperada = self.target[perceptron]
+                resposta_esperada = target[perceptron]
                 info_erro = (resposta_esperada - camada[perceptron].saida) * camada[perceptron].aplicar_funcao_ativacao_derivada(camada[perceptron].entrada_total)
                 erros.append(info_erro)
         elif camada is self.camadas_escondidas[-1]:

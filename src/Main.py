@@ -1,34 +1,28 @@
 """
-    Classe responsavel por por controlar toda a execução do algoritmo Multi-layer Perceptron, tanto para sua fase
+    Classe responsavel por controlar toda a execução do algoritmo Multilayer Perceptron, tanto para sua fase de
     treinamento, quanto para sua fase de teste
 """
 
 import time
-from src.env import NUMERO_DE_EPOCAS, BIAS, TAXA_DE_APRENDIZADO
+from src.env import NUMERO_DE_EPOCAS, TAXA_DE_APRENDIZADO, NUMERO_DE_CAMADAS_ESCONDIDAS
 from src.helpers.Mapper import Mapper
+from src.helpers.Logger import Logger
 from src.structures.RedeNeural import RedeNeural
 
-problemas = Mapper().arquivos
 
-"""
-    Para cada problema mapeado, iremos realizar o treino abaixo, onde cada sample do problema em questao passa 
-    pela rede neural e gera logs de seus resultados
-"""
-
-for problema in problemas:
-    print(f"treinando {problema['nome_problema']}")
-    num_nos_camada_entrada = len(problema['inputs'][0]['sample'])
-    num_camadas_escondidas = 1
+def inicializa_rede(file):
+    num_nos_camada_entrada = len(file['inputs'][0]['sample'])
+    num_camadas_escondidas = NUMERO_DE_CAMADAS_ESCONDIDAS
     """
          O numero de nos na camada escondida e calculado como sendo a metade do numero de entradas, assim, 
          independente do problema, automaticamente se pode estabelecer esse parametro
-         
-    """
-    num_nos_camada_escondida = int(len(problema['inputs'][0]['sample']) / 2)
-    num_nos_camada_saida = len(problema['inputs'][0]['target'])
 
     """
-        Para cada problema, uma rede e instanciada de acordo com seus respectivos parametros
+    num_nos_camada_escondida = int(len(file['inputs'][0]['sample']) / 2)
+    num_nos_camada_saida = len(file['inputs'][0]['target_value'])
+
+    """
+        Para cada problema, uma rede eh instanciada de acordo com seus respectivos parametros
     """
     rede_neural = RedeNeural(TAXA_DE_APRENDIZADO,
                              num_nos_camada_entrada,
@@ -36,60 +30,52 @@ for problema in problemas:
                              num_nos_camada_escondida,
                              num_nos_camada_saida)
 
-    for input in problema['inputs']:
-        rede_neural.problema = problema['nome_problema']
-        log_file = open(f"../logs/{problema['nome_problema']}/Log_PesosIniciais - " +
-                        'Target ' + str(input['target_description']) + time.strftime(" - %H.%M.%S - %d %m %Y.txt"), "w")
-        log_file.write('CAMADA: cam_escondida \n')
-        for perceptron in rede_neural.camadas_escondidas[0]:
-            log_file.write('Perceptron: ' + str(rede_neural.camadas_escondidas[0].index(perceptron) + 1) + '\n')
-            for peso in perceptron.pesos_entrada:
-                log_file.write(f'Peso [{perceptron.pesos_entrada.index(peso)}]: {peso}' + "\n")
-            log_file.write('\n')
-        log_file.write('CAMADA: cam_saida \n')
-        for perceptron in rede_neural.camada_saida:
-            log_file.write('Perceptron: ' + str(rede_neural.camada_saida.index(perceptron) + 1) + '\n')
-            for peso in perceptron.pesos_entrada:
-                log_file.write(f'Peso [{perceptron.pesos_entrada.index(peso)}]: {peso}' + "\n")
-            log_file.write('\n')
+    return rede_neural
 
-        rede_neural.treinar(NUMERO_DE_EPOCAS, input['target'], input['sample'], input['target_description'])
 
-        log_file.write('\n')
-        log_file.write(f"Target: {input['target_description']} \n")
-
-        log_file = open(f"../logs/{problema['nome_problema']}/Log_PesosFinais - " +
-                        'Target ' + str(input['target_description']) + time.strftime(" - %H.%M.%S - %d %m %Y.txt"), "w")
-        log_file.write('CAMADA: cam_escondida \n')
-        for perceptron in rede_neural.camadas_escondidas[0]:
-            log_file.write('Perceptron: ' + str(rede_neural.camadas_escondidas[0].index(perceptron) + 1) + '\n')
-            for peso in perceptron.pesos_entrada:
-                log_file.write(f'Peso [{perceptron.pesos_entrada.index(peso)}]: {peso}' + "\n")
-            log_file.write('\n')
-        log_file.write('\n')
-        log_file.write('\n')
-        log_file.write('CAMADA: cam_saida \n')
-        for perceptron in rede_neural.camada_saida:
-            log_file.write('Perceptron: ' + str(rede_neural.camada_saida.index(perceptron) + 1) + '\n')
-            for peso in perceptron.pesos_entrada:
-                log_file.write(f'Peso [{perceptron.pesos_entrada.index(peso)}]: {peso}' + "\n")
-            log_file.write('\n')
-
-    log_file = open(
-        f"../logs/{problema['nome_problema']}/Log_Parametros_Iniciais - {time.strftime('%H.%M.%S - %d %m %Y.txt')}", "w")
-    log_file.write('\n')
-    log_file.write(f"ARQUIVO DE LEITURA: {problema['nome_problema']} \n")
-    log_file.write(f'PERCEPTRONS CAMADA DE ENTRADA: {num_nos_camada_entrada} \n')
-    log_file.write(f'QUANTIDADE CAMADA ESCONDIDA: {num_camadas_escondidas} \n')
-    log_file.write(f'PERCEPTRONS CAMADA ESCONDIDA: {num_nos_camada_escondida} \n')
-    log_file.write(f'PERCEPTRONS CAMADA DE SAIDA: {num_nos_camada_saida} \n')
-    log_file.write(f'TAXA DE APRENDIZADO: {TAXA_DE_APRENDIZADO} \n')
-    log_file.write(f'NUMERO DE EPOCAS: {NUMERO_DE_EPOCAS} \n')
-
+def treinar_rede(rede_neural, file, logger):
     """
-        Para testarmos o problema dos caracteres com ruido, iremos fazer a aplicacao dele na rede que foi 
+        Para testarmos o problema dos caracteres com ruido, iremos fazer a aplicacao dele na rede que foi
         treinada pelo problema dos caracteres limpos
     """
-    if problema['nome_problema'] == 'caracteres-limpos':
-        for input in Mapper().arquivos_teste[0]['inputs']:
-            rede_neural.testar(input['target'], input['sample'], input['target_description'])
+    logger.log_inputs(rede_neural, file)
+    logger.log_line(f'Numero de epocas: {NUMERO_DE_EPOCAS}')
+    logger.log_line()
+    for input in file['inputs']:
+        logger.log_weights(rede_neural)
+
+        rede_neural.treinar(NUMERO_DE_EPOCAS, input['target_value'], input['sample'], input['target'], logger)
+
+        logger.log_weights(rede_neural)
+
+
+def testar_rede(rede_neural, file, logger):
+    logger.log_inputs(rede_neural, file)
+    logger.log_line()
+    for input in file['inputs']:
+        rede_neural.testar(input['sample'], input['target'], logger)
+
+
+def main():
+    mapper = Mapper()
+    train_files = mapper.arquivos_treino
+    test_files = mapper.arquivos_teste
+
+    """
+        Para cada problema mapeado, iremos realizar o treino abaixo, onde cada amostra do problema em questao passa 
+        pela rede neural e gera logs de seus resultados
+    """
+    for file in train_files:
+        rede_neural = inicializa_rede(file)
+        logger = Logger(file)
+        treinar_rede(rede_neural, file, logger)
+        logger.end_logger()
+
+    for file in test_files:
+        logger = Logger(file, True)
+        testar_rede(rede_neural, file, logger)
+        logger.end_logger()
+
+
+if __name__ == '__main__':
+    main()

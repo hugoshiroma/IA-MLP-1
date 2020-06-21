@@ -1,10 +1,13 @@
 """
     Classe responsavel por fazer o mapeamento dos arquivos .csv para teste e para treino da rede
-    tratando as respostas esperadas para o problema e gerando dicionarios para melhor manipulá-los
+    tratando as respostas esperadas para o problema e gerando dicionarios para melhor manipula-los
 
     Functions:
-        init(self): Inicia a leitura do arquivo.
-        handle_input: Funcao que le o arquivo .csv retornando um dicioncario de dados para ser usado na rede neural.
+        init(self): Inicializa a classe Mapper que le todos os arquivos dispostos na pasta 'inputs', considerando que
+            todos os arquivos são .csv, que possuem uma amostra por linha e que o target se encontra na ultima posicao
+            da linha;
+        get_train_files():
+        handle_input: Le o arquivo .csv retornando um dicioncario de dados para ser usado na rede neural.
         arquivo(self): Funcao que guarda o objeto do retorno da funcao 'handle_input' na variavel _arquivo.
         arquivo(self,value): Funcao que 'seta' os valores do objeto guardado pela funcao 'arquivo(self)' na variavel _arquivo.
         get_target(self, target): Funcao que retorna o valor esperado dentro da rede de acordo com o target alfanumerico
@@ -12,29 +15,21 @@
 """
 
 import csv
-from src.env import ARQUIVOS_PARA_TREINO, ARQUIVOS_PARA_TESTE
+from src.env import ARQUIVOS_PARA_TREINO, ARQUIVOS_PARA_TESTE, TARGETS
 
 
 class Mapper:
     def __init__(self):
-        self._arquivos = self.get_multiple_files()
-        self.arquivos_teste = self.get_test_file()
+        self._arquivos_treino = self.get_train_files()
+        self._arquivos_teste = self.get_test_files()
 
-    @property
-    def arquivos(self):
-        return self._arquivos
-
-    @arquivos.setter
-    def arquivos(self, value):
-        self._arquivos = value
-
-    def get_multiple_files(self):
+    def get_train_files(self):
         result = []
         for arquivo in ARQUIVOS_PARA_TREINO:
             result.append(self.handle_input(arquivo))
         return result
 
-    def get_test_file(self):
+    def get_test_files(self):
         result = []
         for arquivo in ARQUIVOS_PARA_TESTE:
             result.append(self.handle_input(arquivo))
@@ -42,39 +37,35 @@ class Mapper:
 
     def handle_input(self, filename):
         inputs = []
-        caminho_arquivo = '../inputs/Part-1/' + filename
+        caminho_arquivo = '../inputs/' + filename
         with open(caminho_arquivo, 'rt', encoding="utf-8-sig") as data:
             dados_arquivo = csv.reader(data)
-
             for linha in dados_arquivo:
-                target = self.get_target(linha[-1])
-                sample = linha[:-1]
                 inputs.append({
-                    'target_description': linha[-1],
-                    'target': target,
-                    'sample': sample
+                    'target': linha[-1],
+                    'sample': linha[:-1],
+                    'target_value': self.get_target_value(filename, linha[-1])
                 })
 
-            result = {'nome_problema': filename[:-4],
+            result = {'filename': filename[:-4],
                       'inputs': inputs}
         return result
 
-    def get_target(self, target):
-        dict = {
-            'A': [1, -1, -1, -1, -1, -1, -1],
-            'B': [-1, 1, -1, -1, -1, -1, -1],
-            'C': [-1, -1, 1, -1, -1, -1, -1],
-            'D': [-1, -1, -1, 1, -1, -1, -1],
-            'E': [-1, -1, -1, -1, 1, -1, -1],
-            'J': [-1, -1, -1, -1, -1, 1, -1],
-            'K': [-1, -1, -1, -1, -1, -1, 1],
-            '0': [0],
-            '1': [1]
-        }
+    def get_target_value(self, filename, target):
+        return TARGETS[filename][target]
 
-        """
-             O target dos outros problemas e transformado em lista para que a rede seja
-            generica para todos os problemas em questao
-        """
+    @property
+    def arquivos_treino(self):
+        return self._arquivos_treino
 
-        return dict[target]
+    @arquivos_treino.setter
+    def arquivos_treino(self, value):
+        self._arquivos_treino = value
+
+    @property
+    def arquivos_teste(self):
+        return self._arquivos_teste
+
+    @arquivos_teste.setter
+    def arquivos_teste(self, value):
+        self._arquivos_teste = value

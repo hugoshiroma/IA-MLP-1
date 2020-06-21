@@ -1,0 +1,5688 @@
+Arquivo lido: problemOR 
+Quantidade de perceptrons na camada de entrada: 2 
+Quantidade de camadas escondidas: 1 
+Quantidade de perceptrons na(s) camada(s) escondida(s): 1 
+Quantidade de perceptrons na camada de saida: 1 
+Taxa de aprendizado: 0.6 
+Numero de epocas: 100
+
+Pesos
+Camada de entrada -> camada escondida[0]
+Perceptron 1
+Peso 1: 0
+Peso 2: -1
+
+Camada escondida[0] -> camada de saida
+Perceptron 1
+Peso 1: -1
+
+Epoca 1
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.07128437372785605
+
+Camada de saida
+Perceptron 1
+Erro: -0.07128437372785605
+
+Saida para target 0
+Perceptron 0
+Saida: 0.3249624726231763
+
+Epoca 2
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.07053354046788184
+
+Camada de saida
+Perceptron 1
+Erro: -0.06839497780842883
+
+Saida para target 0
+Perceptron 0
+Saida: 0.3162811694413648
+
+Epoca 3
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.06963982419868546
+
+Camada de saida
+Perceptron 1
+Erro: -0.0655776390402735
+
+Saida para target 0
+Perceptron 0
+Saida: 0.30779405387947606
+
+Epoca 4
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.06862787040800117
+
+Camada de saida
+Perceptron 1
+Erro: -0.06284758282247796
+
+Saida para target 0
+Perceptron 0
+Saida: 0.2995380648045329
+
+Epoca 5
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.06752144171832675
+
+Camada de saida
+Perceptron 1
+Erro: -0.060216655170016196
+
+Saida para target 0
+Perceptron 0
+Saida: 0.2915421107220198
+
+Epoca 6
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.06634270029606494
+
+Camada de saida
+Perceptron 1
+Erro: -0.05769342434610217
+
+Saida para target 0
+Perceptron 0
+Saida: 0.2838273909661182
+
+Epoca 7
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.06511172524084911
+
+Camada de saida
+Perceptron 1
+Erro: -0.05528343958783938
+
+Saida para target 0
+Perceptron 0
+Saida: 0.27640803228543215
+
+Epoca 8
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.06384624524023384
+
+Camada de saida
+Perceptron 1
+Erro: -0.052989590833994404
+
+Saida para target 0
+Perceptron 0
+Saida: 0.26929192411580577
+
+Epoca 9
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.06256155077115215
+
+Camada de saida
+Perceptron 1
+Erro: -0.05081251869226734
+
+Saida para target 0
+Perceptron 0
+Saida: 0.262481649078293
+
+Epoca 10
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.06127054361734882
+
+Camada de saida
+Perceptron 1
+Erro: -0.04875103379098742
+
+Saida para target 0
+Perceptron 0
+Saida: 0.25597542629767234
+
+Epoca 11
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.059983882091053424
+
+Camada de saida
+Perceptron 1
+Erro: -0.046802516096354566
+
+Saida para target 0
+Perceptron 0
+Saida: 0.24976800841230262
+
+Epoca 12
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.058710185398202004
+
+Camada de saida
+Perceptron 1
+Erro: -0.04496327558708255
+
+Saida para target 0
+Perceptron 0
+Saida: 0.2438514947813423
+
+Epoca 13
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.057456267715066255
+
+Camada de saida
+Perceptron 1
+Erro: -0.043228864664369274
+
+Saida para target 0
+Perceptron 0
+Saida: 0.238216041290611
+
+Epoca 14
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.05622738003916542
+
+Camada de saida
+Perceptron 1
+Erro: -0.04159433940965599
+
+Saida para target 0
+Perceptron 0
+Saida: 0.23285046060752534
+
+Epoca 15
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.05502744469381389
+
+Camada de saida
+Perceptron 1
+Erro: -0.04005447136777391
+
+Saida para target 0
+Perceptron 0
+Saida: 0.2277427159424349
+
+Epoca 16
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.05385927300147763
+
+Camada de saida
+Perceptron 1
+Erro: -0.03860391427781364
+
+Saida para target 0
+Perceptron 0
+Saida: 0.22288031701727987
+
+Epoca 17
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.05272476096886057
+
+Camada de saida
+Perceptron 1
+Erro: -0.03723733153698231
+
+Saida para target 0
+Perceptron 0
+Saida: 0.21825062986021315
+
+Epoca 18
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.051625060939347725
+
+Camada de saida
+Perceptron 1
+Erro: -0.03594949058449462
+
+Saida para target 0
+Perceptron 0
+Saida: 0.2138411130398946
+
+Epoca 19
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.05056072926319805
+
+Camada de saida
+Perceptron 1
+Erro: -0.03473533018399027
+
+Saida para target 0
+Perceptron 0
+Saida: 0.2096394927003716
+
+Epoca 20
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.04953185133811381
+
+Camada de saida
+Perceptron 1
+Erro: -0.03359000602997248
+
+Saida para target 0
+Perceptron 0
+Saida: 0.20563388777458355
+
+Epoca 21
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.04853814609367007
+
+Camada de saida
+Perceptron 1
+Erro: -0.03250891939267979
+
+Saida para target 0
+Perceptron 0
+Saida: 0.20181289541076838
+
+Epoca 22
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.04757905231012848
+
+Camada de saida
+Perceptron 1
+Erro: -0.03148773276775899
+
+Saida para target 0
+Perceptron 0
+Saida: 0.19816564518708726
+
+Epoca 23
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.046653799214282476
+
+Camada de saida
+Perceptron 1
+Erro: -0.03052237578425452
+
+Saida para target 0
+Perceptron 0
+Saida: 0.19468182926704689
+
+Epoca 24
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.045761463684980075
+
+Camada de saida
+Perceptron 1
+Erro: -0.029609043984649818
+
+Saida para target 0
+Perceptron 0
+Saida: 0.19135171434593493
+
+Epoca 25
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.04490101620136986
+
+Camada de saida
+Perceptron 1
+Erro: -0.02874419253938285
+
+Saida para target 0
+Perceptron 0
+Saida: 0.1881661400953635
+
+Epoca 26
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.044071357426601655
+
+Camada de saida
+Perceptron 1
+Erro: -0.02792452649704885
+
+Saida para target 0
+Perceptron 0
+Saida: 0.18511650783939487
+
+Epoca 27
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.04327134707001432
+
+Camada de saida
+Perceptron 1
+Erro: -0.02714698879434313
+
+Saida para target 0
+Perceptron 0
+Saida: 0.18219476238503637
+
+Epoca 28
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.042499826430614174
+
+Camada de saida
+Perceptron 1
+Erro: -0.0264087469469324
+
+Saida para target 0
+Perceptron 0
+Saida: 0.1793933692667518
+
+Epoca 29
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.04175563580421455
+
+Camada de saida
+Perceptron 1
+Erro: -0.025707179102906656
+
+Saida para target 0
+Perceptron 0
+Saida: 0.17670528912996902
+
+Epoca 30
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.04103762774067785
+
+Camada de saida
+Perceptron 1
+Erro: -0.025039859953493258
+
+Saida para target 0
+Perceptron 0
+Saida: 0.1741239505526656
+
+Epoca 31
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.040344676967467956
+
+Camada de saida
+Perceptron 1
+Erro: -0.024404546851517647
+
+Saida para target 0
+Perceptron 0
+Saida: 0.171643222268437
+
+Epoca 32
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.03967568765028256
+
+Camada de saida
+Perceptron 1
+Erro: -0.02379916637815048
+
+Saida para target 0
+Perceptron 0
+Saida: 0.16925738549240346
+
+Epoca 33
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.039029598538867415
+
+Camada de saida
+Perceptron 1
+Erro: -0.02322180151561586
+
+Saida para target 0
+Perceptron 0
+Saida: 0.16696110684860202
+
+Epoca 34
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.03840538644367979
+
+Camada de saida
+Perceptron 1
+Erro: -0.022670679521841406
+
+Saida para target 0
+Perceptron 0
+Saida: 0.16474941224211262
+
+Epoca 35
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.03780206840420735
+
+Camada de saida
+Perceptron 1
+Erro: -0.022144160557733418
+
+Saida para target 0
+Perceptron 0
+Saida: 0.16261766190116958
+
+Epoca 36
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.037218702839891156
+
+Camada de saida
+Perceptron 1
+Erro: -0.02164072708504546
+
+Saida para target 0
+Perceptron 0
+Saida: 0.16056152672584098
+
+Epoca 37
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.036654389917391395
+
+Camada de saida
+Perceptron 1
+Erro: -0.021158974029668355
+
+Saida para target 0
+Perceptron 0
+Saida: 0.15857696601402466
+
+Epoca 38
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.03610827132128824
+
+Camada de saida
+Perceptron 1
+Erro: -0.020697599689254734
+
+Saida para target 0
+Perceptron 0
+Saida: 0.15666020658735097
+
+Epoca 39
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.035579529577409175
+
+Camada de saida
+Perceptron 1
+Erro: -0.020255397353574192
+
+Saida para target 0
+Perceptron 0
+Saida: 0.1548077233049931
+
+Epoca 40
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.03506738704727951
+
+Camada de saida
+Perceptron 1
+Erro: -0.019831247599474282
+
+Saida para target 0
+Perceptron 0
+Saida: 0.15301622092916245
+
+Epoca 41
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.034571104687402085
+
+Camada de saida
+Perceptron 1
+Erro: -0.01942411121872237
+
+Saida para target 0
+Perceptron 0
+Saida: 0.1512826172896933
+
+Epoca 42
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.034089980647099345
+
+Camada de saida
+Perceptron 1
+Erro: -0.01903302273550668
+
+Saida para target 0
+Perceptron 0
+Saida: 0.14960402768464334
+
+Epoca 43
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.03362334876259969
+
+Camada de saida
+Perceptron 1
+Erro: -0.018657084470365484
+
+Saida para target 0
+Perceptron 0
+Saida: 0.14797775044774716
+
+Epoca 44
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.03317057699218087
+
+Camada de saida
+Perceptron 1
+Erro: -0.018295461108329383
+
+Saida para target 0
+Perceptron 0
+Saida: 0.14640125361069595
+
+Epoca 45
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.032731065826889075
+
+Camada de saida
+Perceptron 1
+Erro: -0.01794737473075745
+
+Saida para target 0
+Perceptron 0
+Saida: 0.14487216258768326
+
+Epoca 46
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.03230424670314082
+
+Camada de saida
+Perceptron 1
+Erro: -0.017612100272471835
+
+Saida para target 0
+Perceptron 0
+Saida: 0.14338824881078346
+
+Epoca 47
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.031889580436982874
+
+Camada de saida
+Perceptron 1
+Erro: -0.01728896136816105
+
+Saida para target 0
+Perceptron 0
+Saida: 0.14194741924699542
+
+Epoca 48
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.03148655569460404
+
+Camada de saida
+Perceptron 1
+Erro: -0.01697732655449593
+
+Saida para target 0
+Perceptron 0
+Saida: 0.14054770673080438
+
+Epoca 49
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.031094687509601752
+
+Camada de saida
+Perceptron 1
+Erro: -0.016676605796892206
+
+Saida para target 0
+Perceptron 0
+Saida: 0.13918726104960677
+
+Epoca 50
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.03071351585428769
+
+Camada de saida
+Perceptron 1
+Erro: -0.01638624731229253
+
+Saida para target 0
+Perceptron 0
+Saida: 0.13786434072308623
+
+Epoca 51
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.030342604269797575
+
+Camada de saida
+Perceptron 1
+Erro: -0.016105734661686154
+
+Saida para target 0
+Perceptron 0
+Saida: 0.13657730542147317
+
+Epoca 52
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.02998153855781359
+
+Camada de saida
+Perceptron 1
+Erro: -0.015834584088309525
+
+Saida para target 0
+Perceptron 0
+Saida: 0.1353246089714534
+
+Epoca 53
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.029629925535198116
+
+Camada de saida
+Perceptron 1
+Erro: -0.015572342079559317
+
+Saida para target 0
+Perceptron 0
+Saida: 0.13410479290223692
+
+Epoca 54
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.02928739185168451
+
+Camada de saida
+Perceptron 1
+Erro: -0.015318583132592968
+
+Saida para target 0
+Perceptron 0
+Saida: 0.13291648048789773
+
+Epoca 55
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.028953582869902763
+
+Camada de saida
+Perceptron 1
+Erro: -0.015072907705390683
+
+Saida para target 0
+Perceptron 0
+Saida: 0.13175837124552495
+
+Epoca 56
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.02862816160637498
+
+Camada de saida
+Perceptron 1
+Erro: -0.014834940336708203
+
+Saida para target 0
+Perceptron 0
+Saida: 0.13062923585195618
+
+Epoca 57
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.028310807731649915
+
+Camada de saida
+Perceptron 1
+Erro: -0.01460432791986678
+
+Saida para target 0
+Perceptron 0
+Saida: 0.12952791144488857
+
+Epoca 58
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.028001216627421763
+
+Camada de saida
+Perceptron 1
+Erro: -0.014380738116714096
+
+Saida para target 0
+Perceptron 0
+Saida: 0.12845329727698296
+
+Epoca 59
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.027699098498262995
+
+Camada de saida
+Perceptron 1
+Erro: -0.014163857899353484
+
+Saida para target 0
+Perceptron 0
+Saida: 0.12740435069418804
+
+Epoca 60
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.02740417753547141
+
+Camada de saida
+Perceptron 1
+Erro: -0.013953392208388635
+
+Saida para target 0
+Perceptron 0
+Saida: 0.12638008341192514
+
+Epoca 61
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.02711619113046822
+
+Camada de saida
+Perceptron 1
+Erro: -0.013749062717475112
+
+Saida para target 0
+Perceptron 0
+Saida: 0.12537955806499912
+
+Epoca 62
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.026834889135170594
+
+Camada de saida
+Perceptron 1
+Erro: -0.01355060669491682
+
+Saida para target 0
+Perceptron 0
+Saida: 0.12440188500914369
+
+Epoca 63
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.026560033166787483
+
+Camada de saida
+Perceptron 1
+Erro: -0.013357775953903814
+
+Saida para target 0
+Perceptron 0
+Saida: 0.12344621935398564
+
+Epoca 64
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.02629139595454019
+
+Camada de saida
+Perceptron 1
+Erro: -0.013170335883764291
+
+Saida para target 0
+Perceptron 0
+Saida: 0.12251175820892872
+
+Epoca 65
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.02602876072588395
+
+Camada de saida
+Perceptron 1
+Erro: -0.012988064555307152
+
+Saida para target 0
+Perceptron 0
+Saida: 0.12159773812503122
+
+Epoca 66
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.025771920629894116
+
+Camada de saida
+Perceptron 1
+Erro: -0.012810751893966932
+
+Saida para target 0
+Perceptron 0
+Saida: 0.120703432717386
+
+Epoca 67
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.02552067819557903
+
+Camada de saida
+Perceptron 1
+Erro: -0.012638198915038439
+
+Saida para target 0
+Perceptron 0
+Saida: 0.119828150453825
+
+Epoca 68
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.02527484482298525
+
+Camada de saida
+Perceptron 1
+Erro: -0.01247021701580835
+
+Saida para target 0
+Perceptron 0
+Saida: 0.11897123259696715
+
+Epoca 69
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.025034240305067734
+
+Camada de saida
+Perceptron 1
+Erro: -0.012306627319861698
+
+Saida para target 0
+Perceptron 0
+Saida: 0.11813205128772286
+
+Epoca 70
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.02479869237840506
+
+Camada de saida
+Perceptron 1
+Erro: -0.0121472600692665
+
+Saida para target 0
+Perceptron 0
+Saida: 0.11731000775936458
+
+Epoca 71
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.024568036300946307
+
+Camada de saida
+Perceptron 1
+Erro: -0.011991954060724695
+
+Saida para target 0
+Perceptron 0
+Saida: 0.11650453067218274
+
+Epoca 72
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.02434211445508106
+
+Camada de saida
+Perceptron 1
+Erro: -0.011840556122126152
+
+Saida para target 0
+Perceptron 0
+Saida: 0.11571507455957715
+
+Epoca 73
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.024120775974425183
+
+Camada de saida
+Perceptron 1
+Erro: -0.011692920626257578
+
+Saida para target 0
+Perceptron 0
+Saida: 0.11494111837718969
+
+Epoca 74
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.023903876392813224
+
+Camada de saida
+Perceptron 1
+Erro: -0.01154890903870409
+
+Saida para target 0
+Perceptron 0
+Saida: 0.11418216414737682
+
+Epoca 75
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.02369127731408126
+
+Camada de saida
+Perceptron 1
+Erro: -0.011408389497239508
+
+Saida para target 0
+Perceptron 0
+Saida: 0.1134377356919483
+
+Epoca 76
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.023482846101313924
+
+Camada de saida
+Perceptron 1
+Erro: -0.011271236420236317
+
+Saida para target 0
+Perceptron 0
+Saida: 0.11270737744667587
+
+Epoca 77
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.023278455584314062
+
+Camada de saida
+Perceptron 1
+Erro: -0.011137330141838915
+
+Saida para target 0
+Perceptron 0
+Saida: 0.11199065335160095
+
+Epoca 78
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.02307798378413287
+
+Camada de saida
+Perceptron 1
+Erro: -0.011006556571836358
+
+Saida para target 0
+Perceptron 0
+Saida: 0.11128714581164834
+
+Epoca 79
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.02288131365357511
+
+Camada de saida
+Perceptron 1
+Erro: -0.010878806878346553
+
+Saida para target 0
+Perceptron 0
+Saida: 0.11059645472249387
+
+Epoca 80
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.022688332832664606
+
+Camada de saida
+Perceptron 1
+Erro: -0.010753977191582723
+
+Saida para target 0
+Perceptron 0
+Saida: 0.10991819655703382
+
+Epoca 81
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.022498933418121494
+
+Camada de saida
+Perceptron 1
+Erro: -0.010631968327117354
+
+Saida para target 0
+Perceptron 0
+Saida: 0.10925200350816848
+
+Epoca 82
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.022313011745967126
+
+Camada de saida
+Perceptron 1
+Erro: -0.010512685527191184
+
+Saida para target 0
+Perceptron 0
+Saida: 0.10859752268395217
+
+Epoca 83
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.02213046818642901
+
+Camada de saida
+Perceptron 1
+Erro: -0.01039603821873347
+
+Saida para target 0
+Perceptron 0
+Saida: 0.10795441535146327
+
+Epoca 84
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.021951206950375366
+
+Camada de saida
+Perceptron 1
+Erro: -0.010281939786869866
+
+Saida para target 0
+Perceptron 0
+Saida: 0.10732235622603455
+
+Epoca 85
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.021775135906557986
+
+Camada de saida
+Perceptron 1
+Erro: -0.010170307362792572
+
+Saida para target 0
+Perceptron 0
+Saida: 0.10670103280273655
+
+Epoca 86
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.02160216640899206
+
+Camada de saida
+Perceptron 1
+Erro: -0.010061061624958878
+
+Saida para target 0
+Perceptron 0
+Saida: 0.10609014472724743
+
+Epoca 87
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.021432213133844965
+
+Camada de saida
+Perceptron 1
+Erro: -0.00995412661266633
+
+Saida para target 0
+Perceptron 0
+Saida: 0.10548940320345641
+
+Epoca 88
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.021265193925247814
+
+Camada de saida
+Perceptron 1
+Erro: -0.009849429551128165
+
+Saida para target 0
+Perceptron 0
+Saida: 0.10489853043534679
+
+Epoca 89
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.021101029649483606
+
+Camada de saida
+Perceptron 1
+Erro: -0.009746900687242153
+
+Saida para target 0
+Perceptron 0
+Saida: 0.10431725910088986
+
+Epoca 90
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.020939644057040192
+
+Camada de saida
+Perceptron 1
+Erro: -0.009646473135308168
+
+Saida para target 0
+Perceptron 0
+Saida: 0.10374533185584475
+
+Epoca 91
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.02078096365205157
+
+Camada de saida
+Perceptron 1
+Erro: -0.009548082732008174
+
+Saida para target 0
+Perceptron 0
+Saida: 0.10318250086551649
+
+Epoca 92
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.020624917568681782
+
+Camada de saida
+Perceptron 1
+Erro: -0.009451667900014732
+
+Saida para target 0
+Perceptron 0
+Saida: 0.1026285273626658
+
+Epoca 93
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.02047143745403471
+
+Camada de saida
+Perceptron 1
+Erro: -0.009357169519642388
+
+Saida para target 0
+Perceptron 0
+Saida: 0.10208318122989286
+
+Epoca 94
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.02032045735720087
+
+Camada de saida
+Perceptron 1
+Erro: -0.009264530808000871
+
+Saida para target 0
+Perceptron 0
+Saida: 0.10154624060494023
+
+Epoca 95
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.020171913624077175
+
+Camada de saida
+Perceptron 1
+Erro: -0.009173697205149383
+
+Saida para target 0
+Perceptron 0
+Saida: 0.10101749150746868
+
+Epoca 96
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.020025744797619583
+
+Camada de saida
+Perceptron 1
+Erro: -0.009084616266788728
+
+Saida para target 0
+Perceptron 0
+Saida: 0.10049672748596268
+
+Epoca 97
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.01988189152321049
+
+Camada de saida
+Perceptron 1
+Erro: -0.008997237563062246
+
+Saida para target 0
+Perceptron 0
+Saida: 0.09998374928351708
+
+Epoca 98
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.019740296458842756
+
+Camada de saida
+Perceptron 1
+Erro: -0.008911512583067755
+
+Saida para target 0
+Perceptron 0
+Saida: 0.09947836452134154
+
+Epoca 99
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.019600904189842193
+
+Camada de saida
+Perceptron 1
+Erro: -0.008827394644712055
+
+Saida para target 0
+Perceptron 0
+Saida: 0.0989803873989019
+
+Epoca 100
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.019463661147867208
+
+Camada de saida
+Perceptron 1
+Erro: -0.00874483880956572
+
+Saida para target 0
+Perceptron 0
+Saida: 0.09848963840969002
+
+Pesos
+Camada de entrada -> camada escondida[0]
+Perceptron 1
+Peso 1: -2.137003584006599
+Peso 2: -3.137003584006599
+
+Camada escondida[0] -> camada de saida
+Perceptron 1
+Peso 1: -2.2309507967490183
+
+Pesos
+Camada de entrada -> camada escondida[0]
+Perceptron 1
+Peso 1: -2.137003584006599
+Peso 2: -3.137003584006599
+
+Camada escondida[0] -> camada de saida
+Perceptron 1
+Peso 1: -2.2309507967490183
+
+Epoca 1
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.3295469980291265
+
+Camada de saida
+Perceptron 1
+Erro: 0.14771594179008715
+
+Saida para target 1
+Perceptron 0
+Saida: 0.3543448197860219
+
+Epoca 2
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.3197888046219868
+
+Camada de saida
+Perceptron 1
+Erro: 0.14488998417763185
+
+Saida para target 1
+Perceptron 0
+Saida: 0.3921708263091708
+
+Epoca 3
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.3088685196753971
+
+Camada de saida
+Perceptron 1
+Erro: 0.14104519710671945
+
+Saida para target 1
+Perceptron 0
+Saida: 0.42159760110875794
+
+Epoca 4
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.29912031896033975
+
+Camada de saida
+Perceptron 1
+Erro: 0.13736019530321186
+
+Saida para target 1
+Perceptron 0
+Saida: 0.4434364673534413
+
+Epoca 5
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.29126167809848597
+
+Camada de saida
+Perceptron 1
+Erro: 0.1342816946644627
+
+Saida para target 1
+Perceptron 0
+Saida: 0.4592884555167814
+
+Epoca 6
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.2852342232974426
+
+Camada de saida
+Perceptron 1
+Erro: 0.13187140466121736
+
+Saida para target 1
+Perceptron 0
+Saida: 0.47069631666281003
+
+Epoca 7
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.28072716037967066
+
+Camada de saida
+Perceptron 1
+Erro: 0.130045762045955
+
+Saida para target 1
+Perceptron 0
+Saida: 0.47888786690604823
+
+Epoca 8
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.27740185694682135
+
+Camada de saida
+Perceptron 1
+Erro: 0.12868740619097005
+
+Saida para target 1
+Perceptron 0
+Saida: 0.484772497981856
+
+Epoca 9
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.27496635964513866
+
+Camada de saida
+Perceptron 1
+Erro: 0.12768684657022583
+
+Saida para target 1
+Perceptron 0
+Saida: 0.4890055415271172
+
+Epoca 10
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.2731899406535849
+
+Camada de saida
+Perceptron 1
+Erro: 0.12695417944677514
+
+Saida para target 1
+Perceptron 0
+Saida: 0.4920550311259217
+
+Epoca 11
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.2718973785271237
+
+Camada de saida
+Perceptron 1
+Erro: 0.12641960712095443
+
+Saida para target 1
+Perceptron 0
+Saida: 0.4942547982955688
+
+Epoca 12
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.2709582566145601
+
+Camada de saida
+Perceptron 1
+Erro: 0.12603045382535194
+
+Saida para target 1
+Perceptron 0
+Saida: 0.49584334181225637
+
+Epoca 13
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.2702765516221765
+
+Camada de saida
+Perceptron 1
+Erro: 0.12574757807675693
+
+Saida para target 1
+Perceptron 0
+Saida: 0.49699147634058044
+
+Epoca 14
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.26978199384157897
+
+Camada de saida
+Perceptron 1
+Erro: 0.12554215660344353
+
+Saida para target 1
+Perceptron 0
+Saida: 0.49782184351903147
+
+Epoca 15
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.2694233439925902
+
+Camada de saida
+Perceptron 1
+Erro: 0.12539308056806406
+
+Saida para target 1
+Perceptron 0
+Saida: 0.4984226861931381
+
+Epoca 16
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.26916332077128985
+
+Camada de saida
+Perceptron 1
+Erro: 0.12528494432576862
+
+Saida para target 1
+Perceptron 0
+Saida: 0.49885760660802175
+
+Epoca 17
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.26897483569693903
+
+Camada de saida
+Perceptron 1
+Erro: 0.12520652986590675
+
+Saida para target 1
+Perceptron 0
+Saida: 0.49917250878648506
+
+Epoca 18
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.2688382237583892
+
+Camada de saida
+Perceptron 1
+Erro: 0.12514968079015046
+
+Saida para target 1
+Perceptron 0
+Saida: 0.4994005573147378
+
+Epoca 19
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.2687392173992693
+
+Camada de saida
+Perceptron 1
+Erro: 0.12510847280619078
+
+Saida para target 1
+Perceptron 0
+Saida: 0.4995657312689816
+
+Epoca 20
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.2686674691697938
+
+Camada de saida
+Perceptron 1
+Erro: 0.1250786059249737
+
+Saida para target 1
+Perceptron 0
+Saida: 0.49968537820177955
+
+Epoca 21
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.2686154766881966
+
+Camada de saida
+Perceptron 1
+Erro: 0.12505696065807015
+
+Saida para target 1
+Perceptron 0
+Saida: 0.49977205340103936
+
+Epoca 22
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.2685778014066765
+
+Camada de saida
+Perceptron 1
+Erro: 0.12504127471815144
+
+Saida para target 1
+Perceptron 0
+Saida: 0.49983484655805677
+
+Epoca 23
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.2685505013938331
+
+Camada de saida
+Perceptron 1
+Erro: 0.125029907876664
+
+Saida para target 1
+Perceptron 0
+Saida: 0.49988033984938746
+
+Epoca 24
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.26853071975447995
+
+Camada de saida
+Perceptron 1
+Erro: 0.12502167112779894
+
+Saida para target 1
+Perceptron 0
+Saida: 0.4999133004525745
+
+Epoca 25
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.2685163861068933
+
+Camada de saida
+Perceptron 1
+Erro: 0.12501570266782713
+
+Saida para target 1
+Perceptron 0
+Saida: 0.49993718143535565
+
+Epoca 26
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.26850600012487663
+
+Camada de saida
+Perceptron 1
+Erro: 0.12501137790958497
+
+Saida para target 1
+Perceptron 0
+Saida: 0.4999544842179103
+
+Epoca 27
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.26849847461708853
+
+Camada de saida
+Perceptron 1
+Erro: 0.12500824421703594
+
+Saida para target 1
+Perceptron 0
+Saida: 0.49996702095647816
+
+Epoca 28
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.2684930217844003
+
+Camada de saida
+Perceptron 1
+Erro: 0.12500597358209425
+
+Saida para target 1
+Perceptron 0
+Saida: 0.4999761045295814
+
+Epoca 29
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.2684890707830841
+
+Camada de saida
+Perceptron 1
+Erro: 0.12500432831796518
+
+Saida para target 1
+Perceptron 0
+Saida: 0.4999826861285782
+
+Epoca 30
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.26848620798187717
+
+Camada de saida
+Perceptron 1
+Erro: 0.12500313619228148
+
+Saida para target 1
+Perceptron 0
+Saida: 0.4999874549161078
+
+Epoca 31
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.26848413366788976
+
+Camada de saida
+Perceptron 1
+Erro: 0.12500227240444017
+
+Saida para target 1
+Perceptron 0
+Saida: 0.4999909102169879
+
+Epoca 32
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.2684826306737621
+
+Camada de saida
+Perceptron 1
+Erro: 0.1250016465243542
+
+Saida para target 1
+Perceptron 0
+Saida: 0.49999341381582635
+
+Epoca 33
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.2684815416441282
+
+Camada de saida
+Perceptron 1
+Erro: 0.12500119302731116
+
+Saida para target 1
+Perceptron 0
+Saida: 0.499995227845208
+
+Epoca 34
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.268480752562666
+
+Camada de saida
+Perceptron 1
+Erro: 0.12500086443510094
+
+Saida para target 1
+Perceptron 0
+Saida: 0.4999965422356838
+
+Epoca 35
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.26848018081580705
+
+Camada de saida
+Perceptron 1
+Erro: 0.1250006263459045
+
+Saida para target 1
+Perceptron 0
+Saida: 0.4999974946038279
+
+Epoca 36
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.26847976654379657
+
+Camada de saida
+Perceptron 1
+Erro: 0.12500045383289923
+
+Saida para target 1
+Perceptron 0
+Saida: 0.4999981846618121
+
+Epoca 37
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.26847946637379083
+
+Camada de saida
+Perceptron 1
+Erro: 0.12500032883468926
+
+Saida para target 1
+Perceptron 0
+Saida: 0.49999868465778274
+
+Epoca 38
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.26847924887896957
+
+Camada de saida
+Perceptron 1
+Erro: 0.12500023826443166
+
+Saida para target 1
+Perceptron 0
+Saida: 0.4999990469404567
+
+Epoca 39
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.26847909128830266
+
+Camada de saida
+Perceptron 1
+Erro: 0.12500017263973515
+
+Saida para target 1
+Perceptron 0
+Saida: 0.49999930944010557
+
+Epoca 40
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.26847897710252167
+
+Camada de saida
+Perceptron 1
+Erro: 0.12500012508990863
+
+Saida para target 1
+Perceptron 0
+Saida: 0.4999994996398648
+
+Epoca 41
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.26847889436670985
+
+Camada de saida
+Perceptron 1
+Erro: 0.12500009063663353
+
+Saida para target 1
+Perceptron 0
+Saida: 0.49999963745320297
+
+Epoca 42
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.26847883441866593
+
+Camada de saida
+Perceptron 1
+Erro: 0.12500006567275582
+
+Saida para target 1
+Perceptron 0
+Saida: 0.49999973730883873
+
+Epoca 43
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.26847879098199967
+
+Camada de saida
+Perceptron 1
+Erro: 0.12500004758463074
+
+Saida para target 1
+Perceptron 0
+Saida: 0.4999998096614047
+
+Epoca 44
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.26847875950901384
+
+Camada de saida
+Perceptron 1
+Erro: 0.12500003447848362
+
+Saida para target 1
+Perceptron 0
+Saida: 0.4999998620860276
+
+Epoca 45
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.26847873670457456
+
+Camada de saida
+Perceptron 1
+Erro: 0.12500002498213805
+
+Saida para target 1
+Perceptron 0
+Saida: 0.4999999000714278
+
+Epoca 46
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.26847872018112034
+
+Camada de saida
+Perceptron 1
+Erro: 0.12500001810135342
+
+Saida para target 1
+Perceptron 0
+Saida: 0.49999992759457595
+
+Epoca 47
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.2684787082086909
+
+Camada de saida
+Perceptron 1
+Erro: 0.12500001311573056
+
+Saida para target 1
+Perceptron 0
+Saida: 0.49999994753707216
+
+Epoca 48
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.268478699533806
+
+Camada de saida
+Perceptron 1
+Erro: 0.1250000095032887
+
+Saida para target 1
+Perceptron 0
+Saida: 0.49999996198684227
+
+Epoca 49
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.268478693248229
+
+Camada de saida
+Perceptron 1
+Erro: 0.12500000688581517
+
+Saida para target 1
+Perceptron 0
+Saida: 0.49999997245673794
+
+Epoca 50
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.2684786886938769
+
+Camada de saida
+Perceptron 1
+Erro: 0.12500000498926755
+
+Saida para target 1
+Perceptron 0
+Saida: 0.499999980042929
+
+Epoca 51
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.2684786853939218
+
+Camada de saida
+Perceptron 1
+Erro: 0.1250000036150826
+
+Saida para target 1
+Perceptron 0
+Saida: 0.4999999855396692
+
+Epoca 52
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.2684786830028673
+
+Camada de saida
+Perceptron 1
+Erro: 0.12500000261938693
+
+Saida para target 1
+Perceptron 0
+Saida: 0.49999998952245206
+
+Epoca 53
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.2684786812703767
+
+Camada de saida
+Perceptron 1
+Erro: 0.12500000189793392
+
+Saida para target 1
+Perceptron 0
+Saida: 0.4999999924082642
+
+Epoca 54
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.268478680015063
+
+Camada de saida
+Perceptron 1
+Erro: 0.12500000137518946
+
+Saida para target 1
+Perceptron 0
+Saida: 0.4999999944992422
+
+Epoca 55
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.26847867910549794
+
+Camada de saida
+Perceptron 1
+Erro: 0.1250000009964235
+
+Saida para target 1
+Perceptron 0
+Saida: 0.49999999601430606
+
+Epoca 56
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.26847867844645273
+
+Camada de saida
+Perceptron 1
+Erro: 0.12500000072198036
+
+Saida para target 1
+Perceptron 0
+Saida: 0.49999999711207854
+
+Epoca 57
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.2684786779689271
+
+Camada de saida
+Perceptron 1
+Erro: 0.1250000005231266
+
+Saida para target 1
+Perceptron 0
+Saida: 0.4999999979074936
+
+Epoca 58
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.2684786776229256
+
+Camada de saida
+Perceptron 1
+Erro: 0.1250000003790428
+
+Saida para target 1
+Perceptron 0
+Saida: 0.4999999984838288
+
+Epoca 59
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.26847867737222264
+
+Camada de saida
+Perceptron 1
+Erro: 0.12500000027464372
+
+Saida para target 1
+Perceptron 0
+Saida: 0.4999999989014251
+
+Epoca 60
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.26847867719057034
+
+Camada de saida
+Perceptron 1
+Erro: 0.1250000001989991
+
+Saida para target 1
+Perceptron 0
+Saida: 0.4999999992040036
+
+Epoca 61
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.2684786770589502
+
+Camada de saida
+Perceptron 1
+Erro: 0.12500000014418913
+
+Saida para target 1
+Perceptron 0
+Saida: 0.49999999942324347
+
+Epoca 62
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.2684786769635819
+
+Camada de saida
+Perceptron 1
+Erro: 0.12500000010447537
+
+Saida para target 1
+Perceptron 0
+Saida: 0.4999999995820985
+
+Epoca 63
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.2684786768944808
+
+Camada de saida
+Perceptron 1
+Erro: 0.12500000007569992
+
+Saida para target 1
+Perceptron 0
+Saida: 0.4999999996972003
+
+Epoca 64
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.26847867684441207
+
+Camada de saida
+Perceptron 1
+Erro: 0.12500000005485
+
+Saida para target 1
+Perceptron 0
+Saida: 0.49999999978059995
+
+Epoca 65
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.26847867680813364
+
+Camada de saida
+Perceptron 1
+Erro: 0.12500000003974276
+
+Saida para target 1
+Perceptron 0
+Saida: 0.49999999984102894
+
+Epoca 66
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.2684786767818474
+
+Camada de saida
+Perceptron 1
+Erro: 0.1250000000287965
+
+Saida para target 1
+Perceptron 0
+Saida: 0.49999999988481403
+
+Epoca 67
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.26847867676280107
+
+Camada de saida
+Perceptron 1
+Erro: 0.12500000002086514
+
+Saida para target 1
+Perceptron 0
+Saida: 0.49999999991653943
+
+Epoca 68
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.26847867674900067
+
+Camada de saida
+Perceptron 1
+Erro: 0.1250000000151183
+
+Saida para target 1
+Perceptron 0
+Saida: 0.4999999999395268
+
+Epoca 69
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.2684786767390013
+
+Camada de saida
+Perceptron 1
+Erro: 0.1250000000109543
+
+Saida para target 1
+Perceptron 0
+Saida: 0.49999999995618283
+
+Epoca 70
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.26847867673175596
+
+Camada de saida
+Perceptron 1
+Erro: 0.12500000000793715
+
+Saida para target 1
+Perceptron 0
+Saida: 0.4999999999682514
+
+Epoca 71
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.26847867672650627
+
+Camada de saida
+Perceptron 1
+Erro: 0.12500000000575107
+
+Saida para target 1
+Perceptron 0
+Saida: 0.49999999997699573
+
+Epoca 72
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.2684786767227025
+
+Camada de saida
+Perceptron 1
+Erro: 0.12500000000416706
+
+Saida para target 1
+Perceptron 0
+Saida: 0.4999999999833318
+
+Epoca 73
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.2684786767199463
+
+Camada de saida
+Perceptron 1
+Erro: 0.1250000000030193
+
+Saida para target 1
+Perceptron 0
+Saida: 0.49999999998792277
+
+Epoca 74
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.2684786767179493
+
+Camada de saida
+Perceptron 1
+Erro: 0.12500000000218772
+
+Saida para target 1
+Perceptron 0
+Saida: 0.4999999999912491
+
+Epoca 75
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.26847867671650233
+
+Camada de saida
+Perceptron 1
+Erro: 0.12500000000158518
+
+Saida para target 1
+Perceptron 0
+Saida: 0.4999999999936593
+
+Epoca 76
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.26847867671545395
+
+Camada de saida
+Perceptron 1
+Erro: 0.12500000000114858
+
+Saida para target 1
+Perceptron 0
+Saida: 0.4999999999954057
+
+Epoca 77
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.2684786767146942
+
+Camada de saida
+Perceptron 1
+Erro: 0.12500000000083222
+
+Saida para target 1
+Perceptron 0
+Saida: 0.4999999999966711
+
+Epoca 78
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.2684786767141438
+
+Camada de saida
+Perceptron 1
+Erro: 0.12500000000060302
+
+Saida para target 1
+Perceptron 0
+Saida: 0.49999999999758793
+
+Epoca 79
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.268478676713745
+
+Camada de saida
+Perceptron 1
+Erro: 0.12500000000043693
+
+Saida para target 1
+Perceptron 0
+Saida: 0.4999999999982523
+
+Epoca 80
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.26847867671345593
+
+Camada de saida
+Perceptron 1
+Erro: 0.12500000000031658
+
+Saida para target 1
+Perceptron 0
+Saida: 0.4999999999987337
+
+Epoca 81
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.26847867671324654
+
+Camada de saida
+Perceptron 1
+Erro: 0.12500000000022937
+
+Saida para target 1
+Perceptron 0
+Saida: 0.4999999999990825
+
+Epoca 82
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.26847867671309483
+
+Camada de saida
+Perceptron 1
+Erro: 0.1250000000001662
+
+Saida para target 1
+Perceptron 0
+Saida: 0.4999999999993352
+
+Epoca 83
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.2684786767129849
+
+Camada de saida
+Perceptron 1
+Erro: 0.12500000000012043
+
+Saida para target 1
+Perceptron 0
+Saida: 0.4999999999995183
+
+Epoca 84
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.2684786767129052
+
+Camada de saida
+Perceptron 1
+Erro: 0.12500000000008726
+
+Saida para target 1
+Perceptron 0
+Saida: 0.49999999999965095
+
+Epoca 85
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.2684786767128475
+
+Camada de saida
+Perceptron 1
+Erro: 0.12500000000006323
+
+Saida para target 1
+Perceptron 0
+Saida: 0.4999999999997471
+
+Epoca 86
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.2684786767128056
+
+Camada de saida
+Perceptron 1
+Erro: 0.1250000000000458
+
+Saida para target 1
+Perceptron 0
+Saida: 0.4999999999998168
+
+Epoca 87
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.2684786767127753
+
+Camada de saida
+Perceptron 1
+Erro: 0.1250000000000332
+
+Saida para target 1
+Perceptron 0
+Saida: 0.4999999999998672
+
+Epoca 88
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.26847867671275333
+
+Camada de saida
+Perceptron 1
+Erro: 0.12500000000002404
+
+Saida para target 1
+Perceptron 0
+Saida: 0.49999999999990385
+
+Epoca 89
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.26847867671273745
+
+Camada de saida
+Perceptron 1
+Erro: 0.12500000000001743
+
+Saida para target 1
+Perceptron 0
+Saida: 0.4999999999999303
+
+Epoca 90
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.26847867671272596
+
+Camada de saida
+Perceptron 1
+Erro: 0.12500000000001263
+
+Saida para target 1
+Perceptron 0
+Saida: 0.4999999999999495
+
+Epoca 91
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.2684786767127176
+
+Camada de saida
+Perceptron 1
+Erro: 0.12500000000000916
+
+Saida para target 1
+Perceptron 0
+Saida: 0.49999999999996336
+
+Epoca 92
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.26847867671271153
+
+Camada de saida
+Perceptron 1
+Erro: 0.12500000000000663
+
+Saida para target 1
+Perceptron 0
+Saida: 0.49999999999997347
+
+Epoca 93
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.26847867671270714
+
+Camada de saida
+Perceptron 1
+Erro: 0.1250000000000048
+
+Saida para target 1
+Perceptron 0
+Saida: 0.4999999999999808
+
+Epoca 94
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.268478676712704
+
+Camada de saida
+Perceptron 1
+Erro: 0.1250000000000035
+
+Saida para target 1
+Perceptron 0
+Saida: 0.499999999999986
+
+Epoca 95
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.2684786767127017
+
+Camada de saida
+Perceptron 1
+Erro: 0.12500000000000253
+
+Saida para target 1
+Perceptron 0
+Saida: 0.4999999999999899
+
+Epoca 96
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.26847867671270004
+
+Camada de saida
+Perceptron 1
+Erro: 0.12500000000000183
+
+Saida para target 1
+Perceptron 0
+Saida: 0.4999999999999927
+
+Epoca 97
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.26847867671269887
+
+Camada de saida
+Perceptron 1
+Erro: 0.12500000000000133
+
+Saida para target 1
+Perceptron 0
+Saida: 0.49999999999999467
+
+Epoca 98
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.26847867671269793
+
+Camada de saida
+Perceptron 1
+Erro: 0.12500000000000094
+
+Saida para target 1
+Perceptron 0
+Saida: 0.4999999999999962
+
+Epoca 99
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.2684786767126973
+
+Camada de saida
+Perceptron 1
+Erro: 0.1250000000000007
+
+Saida para target 1
+Perceptron 0
+Saida: 0.4999999999999972
+
+Epoca 100
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.2684786767126968
+
+Camada de saida
+Perceptron 1
+Erro: 0.1250000000000005
+
+Saida para target 1
+Perceptron 0
+Saida: 0.499999999999998
+
+Pesos
+Camada de entrada -> camada escondida[0]
+Perceptron 1
+Peso 1: 14.132366792930544
+Peso 2: -19.406373960943746
+
+Camada escondida[0] -> camada de saida
+Perceptron 1
+Peso 1: -2.1478294137015657
+
+Pesos
+Camada de entrada -> camada escondida[0]
+Perceptron 1
+Peso 1: 14.132366792930544
+Peso 2: -19.406373960943746
+
+Camada escondida[0] -> camada de saida
+Perceptron 1
+Peso 1: -2.1478294137015657
+
+Epoca 1
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.18003472930297792
+
+Camada de saida
+Perceptron 1
+Erro: 0.08382170769917262
+
+Saida para target 1
+Perceptron 0
+Saida: 0.10453423047136144
+
+Epoca 2
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.18192902282994827
+
+Camada de saida
+Perceptron 1
+Erro: 0.08673462056577967
+
+Saida para target 1
+Perceptron 0
+Saida: 0.10933650183074252
+
+Epoca 3
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.18365576048808793
+
+Camada de saida
+Perceptron 1
+Erro: 0.08978545785424638
+
+Saida para target 1
+Perceptron 0
+Saida: 0.11450831599533028
+
+Epoca 4
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.18517312188087426
+
+Camada de saida
+Perceptron 1
+Erro: 0.09297592822757365
+
+Saida para target 1
+Perceptron 0
+Saida: 0.12008512093341109
+
+Epoca 5
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.18643256362584057
+
+Camada de saida
+Perceptron 1
+Erro: 0.09630583138504258
+
+Saida para target 1
+Perceptron 0
+Saida: 0.12610572213578153
+
+Epoca 6
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.1873781481433217
+
+Camada de saida
+Perceptron 1
+Erro: 0.09977243455714416
+
+Saida para target 1
+Perceptron 0
+Saida: 0.13261240710083078
+
+Epoca 7
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.1879459741578483
+
+Camada de saida
+Perceptron 1
+Erro: 0.10336971683570806
+
+Saida para target 1
+Perceptron 0
+Saida: 0.13965098104392468
+
+Epoca 8
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.18806380447050342
+
+Camada de saida
+Perceptron 1
+Erro: 0.10708747157748925
+
+Saida para target 1
+Perceptron 0
+Saida: 0.14727067001978095
+
+Epoca 9
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.18765102244169543
+
+Camada de saida
+Perceptron 1
+Erro: 0.11091026663977693
+
+Saida para target 1
+Perceptron 0
+Saida: 0.1555238349937389
+
+Epoca 10
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.1866190898896414
+
+Camada de saida
+Perceptron 1
+Erro: 0.11481627850953131
+
+Saida para target 1
+Perceptron 0
+Saida: 0.16446542655904467
+
+Epoca 11
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.18487272177877603
+
+Camada de saida
+Perceptron 1
+Erro: 0.1187760417559782
+
+Saida para target 1
+Perceptron 0
+Saida: 0.17415209646612917
+
+Epoca 12
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.1823120290837247
+
+Camada de saida
+Perceptron 1
+Erro: 0.12275119171379248
+
+Saida para target 1
+Perceptron 0
+Saida: 0.18464087165186926
+
+Epoca 13
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.178835896865554
+
+Camada de saida
+Perceptron 1
+Erro: 0.12669332675899567
+
+Saida para target 1
+Perceptron 0
+Saida: 0.19598729346886173
+
+Epoca 14
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.17434683953486158
+
+Camada de saida
+Perceptron 1
+Erro: 0.13054317512612873
+
+Saida para target 1
+Perceptron 0
+Saida: 0.20824293574121772
+
+Epoca 15
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.1687574832943759
+
+Camada de saida
+Perceptron 1
+Erro: 0.13423031323423648
+
+Saida para target 1
+Perceptron 0
+Saida: 0.22145224836090607
+
+Epoca 16
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.161998639269907
+
+Camada de saida
+Perceptron 1
+Erro: 0.13767373405809052
+
+Saida para target 1
+Perceptron 0
+Saida: 0.2356487373388164
+
+Epoca 17
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.15402863109489598
+
+Camada de saida
+Perceptron 1
+Erro: 0.14078358270414937
+
+Saida para target 1
+Perceptron 0
+Saida: 0.25085059454714326
+
+Epoca 18
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.14484313451504355
+
+Camada de saida
+Perceptron 1
+Erro: 0.14346433236156128
+
+Saida para target 1
+Perceptron 0
+Saida: 0.26705603135500927
+
+Epoca 19
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.1344843266832331
+
+Camada de saida
+Perceptron 1
+Erro: 0.1456195371674034
+
+Saida para target 1
+Perceptron 0
+Saida: 0.28423873796801574
+
+Epoca 20
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.12304774270264204
+
+Camada de saida
+Perceptron 1
+Erro: 0.14715805264112145
+
+Saida para target 1
+Perceptron 0
+Saida: 0.30234405445603424
+
+Epoca 21
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.11068506415299714
+
+Camada de saida
+Perceptron 1
+Erro: 0.14800127489090867
+
+Saida para target 1
+Perceptron 0
+Saida: 0.32128655084535634
+
+Epoca 22
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.09760129608249453
+
+Camada de saida
+Perceptron 1
+Erro: 0.14809058074795653
+
+Saida para target 1
+Perceptron 0
+Saida: 0.34094971176184413
+
+Epoca 23
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.08404552884159776
+
+Camada de saida
+Perceptron 1
+Erro: 0.14739386404861257
+
+Saida para target 1
+Perceptron 0
+Saida: 0.3611882546102553
+
+Epoca 24
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.07029566514443022
+
+Camada de saida
+Perceptron 1
+Erro: 0.14590998834551674
+
+Saida para target 1
+Perceptron 0
+Saida: 0.3818332658199568
+
+Epoca 25
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.05663884432364471
+
+Camada de saida
+Perceptron 1
+Erro: 0.14367020431144079
+
+Saida para target 1
+Perceptron 0
+Saida: 0.40269986622119786
+
+Epoca 26
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.043350388001722175
+
+Camada de saida
+Perceptron 1
+Erro: 0.14073610275607965
+
+Saida para target 1
+Perceptron 0
+Saida: 0.4235966268733111
+
+Epoca 27
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.03067451934849304
+
+Camada de saida
+Perceptron 1
+Erro: 0.13719436071893676
+
+Saida para target 1
+Perceptron 0
+Saida: 0.44433559464215633
+
+Epoca 28
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.01880968951379913
+
+Camada de saida
+Perceptron 1
+Erro: 0.13314917619794048
+
+Saida para target 1
+Perceptron 0
+Saida: 0.46474166998940686
+
+Epoca 29
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: -0.00790022420634159
+
+Camada de saida
+Perceptron 1
+Erro: 0.1287136751257365
+
+Saida para target 1
+Perceptron 0
+Saida: 0.4846602450606259
+
+Epoca 30
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.0019654160595953523
+
+Camada de saida
+Perceptron 1
+Erro: 0.12400161243858808
+
+Saida para target 1
+Perceptron 0
+Saida: 0.5039623978994723
+
+Epoca 31
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.010750723541870108
+
+Camada de saida
+Perceptron 1
+Erro: 0.11912041463662773
+
+Saida para target 1
+Perceptron 0
+Saida: 0.5225474203138488
+
+Epoca 32
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.018463310130829406
+
+Camada de saida
+Perceptron 1
+Erro: 0.11416616181492932
+
+Saida para target 1
+Perceptron 0
+Saida: 0.5403428946221346
+
+Epoca 33
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.025145086700762282
+
+Camada de saida
+Perceptron 1
+Erro: 0.10922064490483646
+
+Saida para target 1
+Perceptron 0
+Saida: 0.5573028327758024
+
+Epoca 34
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.0308621399099593
+
+Camada de saida
+Perceptron 1
+Erro: 0.10435027833307504
+
+Saida para target 1
+Perceptron 0
+Saida: 0.5734045195199914
+
+Epoca 35
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.035695503786729296
+
+Camada de saida
+Perceptron 1
+Erro: 0.09960644837534699
+
+Saida para target 1
+Perceptron 0
+Saida: 0.5886446837256568
+
+Epoca 36
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.03973349448167145
+
+Camada de saida
+Perceptron 1
+Erro: 0.09502682139311691
+
+Saida para target 1
+Perceptron 0
+Saida: 0.6030355115967495
+
+Epoca 37
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.04306583474778618
+
+Camada de saida
+Perceptron 1
+Erro: 0.0906371797957463
+
+Saida para target 1
+Perceptron 0
+Saida: 0.6166008670613613
+
+Epoca 38
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.04577949179847813
+
+Camada de saida
+Perceptron 1
+Erro: 0.08645344751567452
+
+Saida para target 1
+Perceptron 0
+Saida: 0.6293729395239289
+
+Epoca 39
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.047955984680114166
+
+Camada de saida
+Perceptron 1
+Erro: 0.08248367223729888
+
+Saida para target 1
+Perceptron 0
+Saida: 0.6413894203075428
+
+Epoca 40
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.04966985414981569
+
+Camada de saida
+Perceptron 1
+Erro: 0.07872982529729702
+
+Saida para target 1
+Perceptron 0
+Saida: 0.6526912242406153
+
+Epoca 41
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.05098799206174674
+
+Camada de saida
+Perceptron 1
+Erro: 0.07518935220995748
+
+Saida para target 1
+Perceptron 0
+Saida: 0.6633207198817812
+
+Epoca 42
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.05196956671738419
+
+Camada de saida
+Perceptron 1
+Erro: 0.07185645613049223
+
+Saida para target 1
+Perceptron 0
+Saida: 0.6733204042246809
+
+Epoca 43
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.05266633323911728
+
+Camada de saida
+Perceptron 1
+Erro: 0.0687231267050766
+
+Saida para target 1
+Perceptron 0
+Saida: 0.6827319477958895
+
+Epoca 44
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.05312317044435887
+
+Camada de saida
+Perceptron 1
+Erro: 0.0657799425773848
+
+Saida para target 1
+Perceptron 0
+Saida: 0.6915955371907182
+
+Epoca 45
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.05337873131892063
+
+Camada de saida
+Perceptron 1
+Erro: 0.06301668200919175
+
+Saida para target 1
+Perceptron 0
+Saida: 0.6999494492309609
+
+Epoca 46
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.053466130728920355
+
+Camada de saida
+Perceptron 1
+Erro: 0.06042277637878727
+
+Saida para target 1
+Perceptron 0
+Saida: 0.7078298006395103
+
+Epoca 47
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.05341362159286132
+
+Camada de saida
+Perceptron 1
+Erro: 0.057987638437610525
+
+Saida para target 1
+Perceptron 0
+Saida: 0.7152704272922685
+
+Epoca 48
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.053245230593891794
+
+Camada de saida
+Perceptron 1
+Erro: 0.055700892903766654
+
+Saida para target 1
+Perceptron 0
+Saida: 0.7223028565651506
+
+Epoca 49
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.05298133822173857
+
+Camada de saida
+Perceptron 1
+Erro: 0.05355253232349236
+
+Saida para target 1
+Perceptron 0
+Saida: 0.7289563445095838
+
+Epoca 50
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.05263919701048344
+
+Camada de saida
+Perceptron 1
+Erro: 0.05153301672719269
+
+Saida para target 1
+Perceptron 0
+Saida: 0.7352579564111225
+
+Epoca 51
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.052233387568777837
+
+Camada de saida
+Perceptron 1
+Erro: 0.04963333172338169
+
+Saida para target 1
+Perceptron 0
+Saida: 0.7412326747692648
+
+Epoca 52
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.05177621539715707
+
+Camada de saida
+Perceptron 1
+Erro: 0.04784501640341163
+
+Saida para target 1
+Perceptron 0
+Saida: 0.746903523038195
+
+Epoca 53
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.05127805331266666
+
+Camada de saida
+Perceptron 1
+Erro: 0.0461601697612046
+
+Saida para target 1
+Perceptron 0
+Saida: 0.7522916967776916
+
+Epoca 54
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.0507476351024707
+
+Camada de saida
+Perceptron 1
+Erro: 0.044571442204171925
+
+Saida para target 1
+Perceptron 0
+Saida: 0.7574166963685006
+
+Epoca 55
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.05019230618927081
+
+Camada de saida
+Perceptron 1
+Erro: 0.04307201706408819
+
+Saida para target 1
+Perceptron 0
+Saida: 0.7622964573154702
+
+Epoca 56
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.04961823687354342
+
+Camada de saida
+Perceptron 1
+Erro: 0.041655585728201
+
+Saida para target 1
+Perceptron 0
+Saida: 0.766947475537334
+
+Epoca 57
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.04903060329396353
+
+Camada de saida
+Perceptron 1
+Erro: 0.04031631902651199
+
+Saida para target 1
+Perceptron 0
+Saida: 0.7713849260406467
+
+Epoca 58
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.048433740729329426
+
+Camada de saida
+Perceptron 1
+Erro: 0.03904883676653845
+
+Saida para target 1
+Perceptron 0
+Saida: 0.7756227740896005
+
+Epoca 59
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.047831273321976814
+
+Camada de saida
+Perceptron 1
+Erro: 0.03784817674858956
+
+Saida para target 1
+Perceptron 0
+Saida: 0.7796738784854412
+
+Epoca 60
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.04722622377490164
+
+Camada de saida
+Perceptron 1
+Erro: 0.03670976417959592
+
+Saida para target 1
+Perceptron 0
+Saida: 0.7835500869144478
+
+Epoca 61
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.04662110608491123
+
+Camada de saida
+Perceptron 1
+Erro: 0.03562938209773032
+
+Saida para target 1
+Perceptron 0
+Saida: 0.7872623235540275
+
+Epoca 62
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.046018003932589084
+
+Camada de saida
+Perceptron 1
+Erro: 0.03460314319684354
+
+Saida para target 1
+Perceptron 0
+Saida: 0.7908206692740941
+
+Epoca 63
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.04541863695989848
+
+Camada de saida
+Perceptron 1
+Erro: 0.03362746327857197
+
+Saida para target 1
+Perceptron 0
+Saida: 0.7942344348591429
+
+Epoca 64
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.04482441682677175
+
+Camada de saida
+Perceptron 1
+Erro: 0.032699036445130454
+
+Saida para target 1
+Perceptron 0
+Saida: 0.7975122277227896
+
+Epoca 65
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.04423649464559057
+
+Camada de saida
+Perceptron 1
+Erro: 0.03181481206533317
+
+Saida para target 1
+Perceptron 0
+Saida: 0.8006620126038428
+
+Epoca 66
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.043655801142487856
+
+Camada de saida
+Perceptron 1
+Erro: 0.03097197349125564
+
+Saida para target 1
+Perceptron 0
+Saida: 0.8036911667305734
+
+Epoca 67
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.04308308068194591
+
+Camada de saida
+Perceptron 1
+Erro: 0.030167918466366895
+
+Saida para target 1
+Perceptron 0
+Saida: 0.8066065299245201
+
+Epoca 68
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.04251892011136692
+
+Camada de saida
+Perceptron 1
+Erro: 0.029400241142841833
+
+Saida para target 1
+Perceptron 0
+Saida: 0.8094144500917567
+
+Epoca 69
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.04196377323060456
+
+Camada de saida
+Perceptron 1
+Erro: 0.028666715612323635
+
+Saida para target 1
+Perceptron 0
+Saida: 0.8121208245214787
+
+Epoca 70
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.041417981563745536
+
+Camada de saida
+Perceptron 1
+Erro: 0.027965280847824684
+
+Saida para target 1
+Perceptron 0
+Saida: 0.8147311373814754
+
+Epoca 71
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.04088179200310533
+
+Camada de saida
+Perceptron 1
+Erro: 0.027294026952672745
+
+Saida para target 1
+Perceptron 0
+Saida: 0.8172504937691357
+
+Epoca 72
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.040355371805272454
+
+Camada de saida
+Perceptron 1
+Erro: 0.02665118261388979
+
+Saida para target 1
+Perceptron 0
+Saida: 0.8196836506462375
+
+Epoca 73
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.0398388213433986
+
+Camada de saida
+Perceptron 1
+Erro: 0.026035103661034134
+
+Saida para target 1
+Perceptron 0
+Saida: 0.8220350449565673
+
+Epoca 74
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.039332184956458544
+
+Camada de saida
+Perceptron 1
+Erro: 0.025444262636530806
+
+Saida para target 1
+Perceptron 0
+Saida: 0.8243088191978648
+
+Epoca 75
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.038835460182937306
+
+Camada de saida
+Perceptron 1
+Erro: 0.024877239289288786
+
+Saida para target 1
+Perceptron 0
+Saida: 0.8265088446939003
+
+Epoca 76
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.03834860562168695
+
+Camada de saida
+Perceptron 1
+Erro: 0.024332711909550456
+
+Saida para target 1
+Perceptron 0
+Saida: 0.8286387427887749
+
+Epoca 77
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.03787154762513022
+
+Camada de saida
+Perceptron 1
+Erro: 0.023809449429147388
+
+Saida para target 1
+Perceptron 0
+Saida: 0.8307019041638073
+
+Epoca 78
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.03740418599842079
+
+Camada de saida
+Perceptron 1
+Erro: 0.023306304217466073
+
+Saida para target 1
+Perceptron 0
+Saida: 0.8327015064575493
+
+Epoca 79
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.036946398851608914
+
+Camada de saida
+Perceptron 1
+Erro: 0.02282220550932001
+
+Saida para target 1
+Perceptron 0
+Saida: 0.8346405303514995
+
+Epoca 80
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.036498046729501
+
+Camada de saida
+Perceptron 1
+Erro: 0.022356153406509708
+
+Saida para target 1
+Perceptron 0
+Saida: 0.836521774267819
+
+Epoca 81
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.0360589761250564
+
+Camada de saida
+Perceptron 1
+Erro: 0.02190721340008204
+
+Saida para target 1
+Perceptron 0
+Saida: 0.8383478678106773
+
+Epoca 82
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.03562902246626236
+
+Camada de saida
+Perceptron 1
+Erro: 0.021474511365153146
+
+Saida para target 1
+Perceptron 0
+Saida: 0.8401212840696555
+
+Epoca 83
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.03520801265300242
+
+Camada de saida
+Perceptron 1
+Erro: 0.02105722898463635
+
+Saida para target 1
+Perceptron 0
+Saida: 0.8418443508917498
+
+Epoca 84
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.03479576720907627
+
+Camada de saida
+Perceptron 1
+Erro: 0.020654599562318916
+
+Saida para target 1
+Perceptron 0
+Saida: 0.8435192612178601
+
+Epoca 85
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.03439210210491918
+
+Camada de saida
+Perceptron 1
+Erro: 0.020265904189480672
+
+Saida para target 1
+Perceptron 0
+Saida: 0.8451480825700788
+
+Epoca 86
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.03399683029842256
+
+Camada de saida
+Perceptron 1
+Erro: 0.019890468232658113
+
+Saida para target 1
+Perceptron 0
+Saida: 0.8467327657675163
+
+Epoca 87
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.0336097630343478
+
+Camada de saida
+Perceptron 1
+Erro: 0.019527658113256005
+
+Saida para target 1
+Perceptron 0
+Saida: 0.848275152940705
+
+Epoca 88
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.033230710936952935
+
+Camada de saida
+Perceptron 1
+Erro: 0.01917687835251298
+
+Saida para target 1
+Perceptron 0
+Saida: 0.849776984907731
+
+Epoca 89
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.03285948492546103
+
+Camada de saida
+Perceptron 1
+Erro: 0.018837568857866895
+
+Saida para target 1
+Perceptron 0
+Saida: 0.8512399079690627
+
+Epoca 90
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.03249589697774864
+
+Camada de saida
+Perceptron 1
+Erro: 0.01850920242905862
+
+Saida para target 1
+Perceptron 0
+Saida: 0.8526654801724999
+
+Epoca 91
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.03213976076400969
+
+Camada de saida
+Perceptron 1
+Erro: 0.018191282464382494
+
+Saida para target 1
+Perceptron 0
+Saida: 0.8540551770947026
+
+Epoca 92
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.03179089216905816
+
+Camada de saida
+Perceptron 1
+Erro: 0.017883340849358328
+
+Saida para target 1
+Perceptron 0
+Saida: 0.8554103971812995
+
+Epoca 93
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.03144910971929551
+
+Camada de saida
+Perceptron 1
+Erro: 0.017584936011784666
+
+Saida para target 1
+Perceptron 0
+Saida: 0.8567324666835695
+
+Epoca 94
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.031114234928106648
+
+Camada de saida
+Perceptron 1
+Erro: 0.01729565112864797
+
+Saida para target 1
+Perceptron 0
+Saida: 0.8580226442261057
+
+Epoca 95
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.030786092571519368
+
+Camada de saida
+Perceptron 1
+Erro: 0.0170150924717319
+
+Saida para target 1
+Perceptron 0
+Saida: 0.8592821250366355
+
+Epoca 96
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.030464510904304375
+
+Camada de saida
+Perceptron 1
+Erro: 0.016742887880002336
+
+Saida para target 1
+Perceptron 0
+Saida: 0.8605120448662695
+
+Epoca 97
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.030149321825272638
+
+Camada de saida
+Perceptron 1
+Erro: 0.016478685347954457
+
+Saida para target 1
+Perceptron 0
+Saida: 0.8617134836258461
+
+Epoca 98
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.029840360999309288
+
+Camada de saida
+Perceptron 1
+Erro: 0.016222151720110725
+
+Saida para target 1
+Perceptron 0
+Saida: 0.8628874687616779
+
+Epoca 99
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.029537467942633535
+
+Camada de saida
+Perceptron 1
+Erro: 0.015972971482760598
+
+Saida para target 1
+Perceptron 0
+Saida: 0.8640349783918999
+
+Epoca 100
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.029240486076875568
+
+Camada de saida
+Perceptron 1
+Erro: 0.01573084564484876
+
+Saida para target 1
+Perceptron 0
+Saida: 0.8651569442227005
+
+Pesos
+Camada de entrada -> camada escondida[0]
+Perceptron 1
+Peso 1: 13.453030809375074
+Peso 2: -18.727037977388274
+
+Camada escondida[0] -> camada de saida
+Perceptron 1
+Peso 1: 1.8682378839131601
+
+Pesos
+Camada de entrada -> camada escondida[0]
+Perceptron 1
+Peso 1: 13.453030809375074
+Peso 2: -18.727037977388274
+
+Camada escondida[0] -> camada de saida
+Perceptron 1
+Peso 1: 1.8682378839131601
+
+Epoca 1
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.23241260819993942
+
+Camada de saida
+Perceptron 1
+Erro: 0.1244020422673018
+
+Saida para target 1
+Perceptron 0
+Saida: 0.5023805508486462
+
+Epoca 2
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.2321004332173234
+
+Camada de saida
+Perceptron 1
+Erro: 0.12420965272689578
+
+Saida para target 1
+Perceptron 0
+Saida: 0.5031417716801475
+
+Epoca 3
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.23168811758537722
+
+Camada de saida
+Perceptron 1
+Erro: 0.12395575152551994
+
+Saida para target 1
+Perceptron 0
+Saida: 0.5041429502631587
+
+Epoca 4
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.23114390245388453
+
+Camada de saida
+Perceptron 1
+Erro: 0.12362097733909905
+
+Saida para target 1
+Perceptron 0
+Saida: 0.5054571791125932
+
+Epoca 5
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.2304262680082611
+
+Camada de saida
+Perceptron 1
+Erro: 0.12318012111514587
+
+Saida para target 1
+Perceptron 0
+Saida: 0.5071779489535121
+
+Epoca 6
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.22948121171983754
+
+Camada de saida
+Perceptron 1
+Erro: 0.1226005657960089
+
+Saida para target 1
+Perceptron 0
+Saida: 0.509423480154247
+
+Epoca 7
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.22823902914923547
+
+Camada de saida
+Perceptron 1
+Erro: 0.12184049039030452
+
+Saida para target 1
+Perceptron 0
+Saida: 0.5123409580232723
+
+Epoca 8
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.22661077138533356
+
+Camada de saida
+Perceptron 1
+Erro: 0.12084697773416235
+
+Saida para target 1
+Perceptron 0
+Saida: 0.5161097636086204
+
+Epoca 9
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.22448487833837696
+
+Camada de saida
+Perceptron 1
+Erro: 0.11955436750598725
+
+Saida para target 1
+Perceptron 0
+Saida: 0.5209421234662317
+
+Epoca 10
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.22172507579282852
+
+Camada de saida
+Perceptron 1
+Erro: 0.11788354359381935
+
+Saida para target 1
+Perceptron 0
+Saida: 0.5270787328450474
+
+Epoca 11
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.21817155116957432
+
+Camada de saida
+Perceptron 1
+Erro: 0.11574336335525058
+
+Saida para target 1
+Perceptron 0
+Saida: 0.5347760306386423
+
+Epoca 12
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.2136485900719998
+
+Camada de saida
+Perceptron 1
+Erro: 0.11303603926164679
+
+Saida para target 1
+Perceptron 0
+Saida: 0.5442814637707116
+
+Epoca 13
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.20798268786905585
+
+Camada de saida
+Perceptron 1
+Erro: 0.1096686066058279
+
+Saida para target 1
+Perceptron 0
+Saida: 0.5557943145456055
+
+Epoca 14
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.20103425818627424
+
+Camada de saida
+Perceptron 1
+Erro: 0.105571854958245
+
+Saida para target 1
+Perceptron 0
+Saida: 0.5694138395052838
+
+Epoca 15
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.19274146622350893
+
+Camada de saida
+Perceptron 1
+Erro: 0.10072523318413956
+
+Saida para target 1
+Perceptron 0
+Saida: 0.5850842258946066
+
+Epoca 16
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.18316570026530868
+
+Camada de saida
+Perceptron 1
+Erro: 0.0951811006244974
+
+Saida para target 1
+Perceptron 0
+Saida: 0.6025550325530455
+
+Epoca 17
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.17251868191564598
+
+Camada de saida
+Perceptron 1
+Erro: 0.08907682145731838
+
+Saida para target 1
+Perceptron 0
+Saida: 0.6213797877464798
+
+Epoca 18
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.16115060369783968
+
+Camada de saida
+Perceptron 1
+Erro: 0.08262389154360446
+
+Saida para target 1
+Perceptron 0
+Saida: 0.6409662882294564
+
+Epoca 19
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.1494941246280396
+
+Camada de saida
+Perceptron 1
+Erro: 0.07607291460786988
+
+Saida para target 1
+Perceptron 0
+Saida: 0.6606694979821927
+
+Epoca 20
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.1379834230728266
+
+Camada de saida
+Perceptron 1
+Erro: 0.06966685129967493
+
+Saida para target 1
+Perceptron 0
+Saida: 0.679895279861265
+
+Epoca 21
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.12698125713009023
+
+Camada de saida
+Perceptron 1
+Erro: 0.0636014244820752
+
+Saida para target 1
+Perceptron 0
+Saida: 0.6981784886808322
+
+Epoca 22
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.11673867744731165
+
+Camada de saida
+Perceptron 1
+Erro: 0.05800548644727411
+
+Saida para target 1
+Perceptron 0
+Saida: 0.7152157214753669
+
+Epoca 23
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.10739116566670681
+
+Camada de saida
+Perceptron 1
+Erro: 0.05294195677143839
+
+Saida para target 1
+Perceptron 0
+Saida: 0.7308564681885695
+
+Epoca 24
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.0989790911053734
+
+Camada de saida
+Perceptron 1
+Erro: 0.04842152464880164
+
+Saida para target 1
+Perceptron 0
+Saida: 0.7450701802301539
+
+Epoca 25
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.0914769234790678
+
+Camada de saida
+Perceptron 1
+Erro: 0.04442014421387511
+
+Saida para target 1
+Perceptron 0
+Saida: 0.7579071387965339
+
+Epoca 26
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.08482039685500495
+
+Camada de saida
+Perceptron 1
+Erro: 0.04089451275724824
+
+Saida para target 1
+Perceptron 0
+Saida: 0.7694642418532192
+
+Epoca 27
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.07892703544782734
+
+Camada de saida
+Perceptron 1
+Erro: 0.03779333492781707
+
+Saida para target 1
+Perceptron 0
+Saida: 0.7798598091981154
+
+Epoca 28
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.07370963158004293
+
+Camada de saida
+Perceptron 1
+Erro: 0.03506444332008678
+
+Saida para target 1
+Perceptron 0
+Saida: 0.7892171808770784
+
+Epoca 29
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.06908408616363296
+
+Camada de saida
+Perceptron 1
+Erro: 0.03265874270100974
+
+Saida para target 1
+Perceptron 0
+Saida: 0.7976551561550551
+
+Epoca 30
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.06497336548026544
+
+Camada de saida
+Perceptron 1
+Erro: 0.03053204036457429
+
+Saida para target 1
+Perceptron 0
+Saida: 0.8052831128805756
+
+Epoca 31
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.0613090425941339
+
+Camada de saida
+Perceptron 1
+Erro: 0.028645607687538533
+
+Saida para target 1
+Perceptron 0
+Saida: 0.8121990517222806
+
+Epoca 32
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.058031463206806314
+
+Camada de saida
+Perceptron 1
+Erro: 0.02696605056872387
+
+Saida para target 1
+Perceptron 0
+Saida: 0.8184893293819079
+
+Epoca 33
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.055089203029283586
+
+Camada de saida
+Perceptron 1
+Erro: 0.0254648479046278
+
+Saida para target 1
+Perceptron 0
+Saida: 0.8242292834458759
+
+Epoca 34
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.052438215103702154
+
+Camada de saida
+Perceptron 1
+Erro: 0.024117765569685357
+
+Saida para target 1
+Perceptron 0
+Saida: 0.8294842661824344
+
+Epoca 35
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.050040890258088805
+
+Camada de saida
+Perceptron 1
+Erro: 0.022904257358303676
+
+Saida para target 1
+Perceptron 0
+Saida: 0.8343108111542672
+
+Epoca 36
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.04786514671242398
+
+Camada de saida
+Perceptron 1
+Erro: 0.021806907305371014
+
+Saida para target 1
+Perceptron 0
+Saida: 0.8387577844960253
+
+Epoca 37
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.045883602523168594
+
+Camada de saida
+Perceptron 1
+Erro: 0.020810935662739703
+
+Saida para target 1
+Perceptron 0
+Saida: 0.8428674485609429
+
+Epoca 38
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.04407284998978305
+
+Camada de saida
+Perceptron 1
+Erro: 0.019903773685360296
+
+Saida para target 1
+Perceptron 0
+Saida: 0.846676408789615
+
+Epoca 39
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.04241283305494954
+
+Camada de saida
+Perceptron 1
+Erro: 0.01907470392653879
+
+Saida para target 1
+Perceptron 0
+Saida: 0.8502164380584455
+
+Epoca 40
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.04088632006510965
+
+Camada de saida
+Perceptron 1
+Erro: 0.018314559099786
+
+Saida para target 1
+Perceptron 0
+Saida: 0.8535151846161735
+
+Epoca 41
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.03947846079404035
+
+Camada de saida
+Perceptron 1
+Erro: 0.01761547147722637
+
+Saida para target 1
+Perceptron 0
+Saida: 0.8565967750100255
+
+Epoca 42
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.03817641590902413
+
+Camada de saida
+Perceptron 1
+Erro: 0.016970664980284184
+
+Saida para target 1
+Perceptron 0
+Saida: 0.8594823251067661
+
+Epoca 43
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.03696904768147328
+
+Camada de saida
+Perceptron 1
+Erro: 0.01637428287207642
+
+Saida para target 1
+Perceptron 0
+Saida: 0.862190372152965
+
+Epoca 44
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.03584666194292319
+
+Camada de saida
+Perceptron 1
+Erro: 0.015821244908401966
+
+Saida para target 1
+Perceptron 0
+Saida: 0.8647372397724552
+
+Epoca 45
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.03480079265528713
+
+Camada de saida
+Perceptron 1
+Erro: 0.01530712875724976
+
+Saida para target 1
+Perceptron 0
+Saida: 0.8671373464076804
+
+Epoca 46
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.033824021797022354
+
+Camada de saida
+Perceptron 1
+Erro: 0.014828071369168591
+
+Saida para target 1
+Perceptron 0
+Saida: 0.8694034662617245
+
+Epoca 47
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.03290982847259763
+
+Camada de saida
+Perceptron 1
+Erro: 0.01438068674067289
+
+Saida para target 1
+Perceptron 0
+Saida: 0.8715469504309769
+
+Epoca 48
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.03205246219955726
+
+Camada de saida
+Perceptron 1
+Erro: 0.013961997155604792
+
+Saida para target 1
+Perceptron 0
+Saida: 0.8735779146959105
+
+Epoca 49
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.031246836214279743
+
+Camada de saida
+Perceptron 1
+Erro: 0.013569375523405395
+
+Saida para target 1
+Perceptron 0
+Saida: 0.8755053993773275
+
+Epoca 50
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.030488437377167207
+
+Camada de saida
+Perceptron 1
+Erro: 0.013200496871994713
+
+Saida para target 1
+Perceptron 0
+Saida: 0.8773375057635808
+
+Epoca 51
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.029773249868890194
+
+Camada de saida
+Perceptron 1
+Erro: 0.012853297410929075
+
+Saida para target 1
+Perceptron 0
+Saida: 0.8790815128564183
+
+Epoca 52
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.029097690370798273
+
+Camada de saida
+Perceptron 1
+Erro: 0.012525939871381567
+
+Saida para target 1
+Perceptron 0
+Saida: 0.880743977551188
+
+Epoca 53
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.028458552832818815
+
+Camada de saida
+Perceptron 1
+Erro: 0.012216784065359287
+
+Saida para target 1
+Perceptron 0
+Saida: 0.8823308208428051
+
+Epoca 54
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.02785296126710975
+
+Camada de saida
+Perceptron 1
+Erro: 0.011924361797704125
+
+Saida para target 1
+Perceptron 0
+Saida: 0.8838474022150227
+
+Epoca 55
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.027278329279062336
+
+Camada de saida
+Perceptron 1
+Erro: 0.011647355419355972
+
+Saida para target 1
+Perceptron 0
+Saida: 0.8852985840120506
+
+Epoca 56
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.026732325270393955
+
+Camada de saida
+Perceptron 1
+Erro: 0.011384579436084985
+
+Saida para target 1
+Perceptron 0
+Saida: 0.8866887872954011
+
+Epoca 57
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.02621284243141219
+
+Camada de saida
+Perceptron 1
+Erro: 0.011134964689084094
+
+Saida para target 1
+Perceptron 0
+Saida: 0.8880220404440962
+
+Epoca 58
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.02571797278877629
+
+Camada de saida
+Perceptron 1
+Erro: 0.010897544707037235
+
+Saida para target 1
+Perceptron 0
+Saida: 0.8893020215538727
+
+Epoca 59
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.02524598469745894
+
+Camada de saida
+Perceptron 1
+Erro: 0.010671443897212288
+
+Saida para target 1
+Perceptron 0
+Saida: 0.8905320955232462
+
+Epoca 60
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.024795303266168276
+
+Camada de saida
+Perceptron 1
+Erro: 0.01045586729871614
+
+Saida para target 1
+Perceptron 0
+Saida: 0.8917153465750574
+
+Epoca 61
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.02436449328832691
+
+Camada de saida
+Perceptron 1
+Erro: 0.010250091666662941
+
+Saida para target 1
+Perceptron 0
+Saida: 0.892854606846306
+
+Epoca 62
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.02395224431909552
+
+Camada de saida
+Perceptron 1
+Erro: 0.010053457693530197
+
+Saida para target 1
+Perceptron 0
+Saida: 0.893952481582564
+
+Epoca 63
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.02355735759554943
+
+Camada de saida
+Perceptron 1
+Erro: 0.009865363204937116
+
+Saida para target 1
+Perceptron 0
+Saida: 0.8950113713926281
+
+Epoca 64
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.02317873454411687
+
+Camada de saida
+Perceptron 1
+Erro: 0.009685257192696336
+
+Saida para target 1
+Perceptron 0
+Saida: 0.8960334919515487
+
+Epoca 65
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.0228153666584926
+
+Camada de saida
+Perceptron 1
+Erro: 0.00951263456924041
+
+Saida para target 1
+Perceptron 0
+Saida: 0.8970208914835163
+
+Epoca 66
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.02246632656388758
+
+Camada de saida
+Perceptron 1
+Erro: 0.00934703154521282
+
+Saida para target 1
+Perceptron 0
+Saida: 0.8979754663083803
+
+Epoca 67
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.022130760110775898
+
+Camada de saida
+Perceptron 1
+Erro: 0.009188021546766427
+
+Saida para target 1
+Perceptron 0
+Saida: 0.898898974695372
+
+Epoca 68
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.02180787936421625
+
+Camada de saida
+Perceptron 1
+Erro: 0.009035211601462593
+
+Saida para target 1
+Perceptron 0
+Saida: 0.8997930492335753
+
+Epoca 69
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.02149695637409274
+
+Camada de saida
+Perceptron 1
+Erro: 0.008888239132023319
+
+Saida para target 1
+Perceptron 0
+Saida: 0.9006592078998675
+
+Epoca 70
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.021197317627874454
+
+Camada de saida
+Perceptron 1
+Erro: 0.008746769105906911
+
+Saida para target 1
+Perceptron 0
+Saida: 0.9014988639805488
+
+Epoca 71
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.020908339101232562
+
+Camada de saida
+Perceptron 1
+Erro: 0.00861049149603037
+
+Saida para target 1
+Perceptron 0
+Saida: 0.9023133349820144
+
+Epoca 72
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.020629441833504566
+
+Camada de saida
+Perceptron 1
+Erro: 0.008479119014182737
+
+Saida para target 1
+Perceptron 0
+Saida: 0.9031038506480058
+
+Epoca 73
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.020360087964891017
+
+Camada de saida
+Perceptron 1
+Erro: 0.00835238508394699
+
+Saida para target 1
+Perceptron 0
+Saida: 0.9038715601857338
+
+Epoca 74
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.020099777180704062
+
+Camada de saida
+Perceptron 1
+Erro: 0.008230042024432886
+
+Saida para target 1
+Perceptron 0
+Saida: 0.9046175387900851
+
+Epoca 75
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.019848043515185147
+
+Camada de saida
+Perceptron 1
+Erro: 0.008111859419943789
+
+Saida para target 1
+Perceptron 0
+Saida: 0.9053427935438871
+
+Epoca 76
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.019604452473573696
+
+Camada de saida
+Perceptron 1
+Erro: 0.00799762265396591
+
+Saida para target 1
+Perceptron 0
+Saida: 0.9060482687625125
+
+Epoca 77
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.019368598436392305
+
+Camada de saida
+Perceptron 1
+Erro: 0.007887131588662702
+
+Saida para target 1
+Perceptron 0
+Saida: 0.9067348508427504
+
+Epoca 78
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.019140102314460773
+
+Camada de saida
+Perceptron 1
+Erro: 0.007780199373457087
+
+Saida para target 1
+Perceptron 0
+Saida: 0.9074033726686288
+
+Epoca 79
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.018918609427066888
+
+Camada de saida
+Perceptron 1
+Erro: 0.007676651368347683
+
+Saida para target 1
+Perceptron 0
+Saida: 0.9080546176206018
+
+Epoca 80
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.018703787579104337
+
+Camada de saida
+Perceptron 1
+Erro: 0.00757632416938461
+
+Saida para target 1
+Perceptron 0
+Saida: 0.9086893232290612
+
+Epoca 81
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.018495325315912105
+
+Camada de saida
+Perceptron 1
+Erro: 0.007479064725266662
+
+Saida para target 1
+Perceptron 0
+Saida: 0.9093081845083929
+
+Epoca 82
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.01829293033709161
+
+Camada de saida
+Perceptron 1
+Erro: 0.0073847295353541035
+
+Saida para target 1
+Perceptron 0
+Saida: 0.9099118570036493
+
+Epoca 83
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.018096328052776094
+
+Camada de saida
+Perceptron 1
+Erro: 0.007293183920543315
+
+Saida para target 1
+Perceptron 0
+Saida: 0.910500959578305
+
+Epoca 84
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.01790526026775243
+
+Camada de saida
+Perceptron 1
+Erro: 0.007204301359455588
+
+Saida para target 1
+Perceptron 0
+Saida: 0.9110760769683836
+
+Epoca 85
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.017719483980504533
+
+Camada de saida
+Perceptron 1
+Erro: 0.007117962883264418
+
+Saida para target 1
+Perceptron 0
+Saida: 0.9116377621254745
+
+Epoca 86
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.01753877028571225
+
+Camada de saida
+Perceptron 1
+Erro: 0.007034056523249124
+
+Saida para target 1
+Perceptron 0
+Saida: 0.9121865383687169
+
+Epoca 87
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.01736290337001996
+
+Camada de saida
+Perceptron 1
+Erro: 0.006952476805829305
+
+Saida para target 1
+Perceptron 0
+Saida: 0.9127229013636754
+
+Epoca 88
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.017191679592011583
+
+Camada de saida
+Perceptron 1
+Erro: 0.0068731242904184
+
+Saida para target 1
+Perceptron 0
+Saida: 0.9132473209441452
+
+Epoca 89
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.01702490663831487
+
+Camada de saida
+Perceptron 1
+Erro: 0.006795905145946823
+
+Saida para target 1
+Perceptron 0
+Saida: 0.913760242791247
+
+Epoca 90
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.01686240274862736
+
+Camada de saida
+Perceptron 1
+Erro: 0.0067207307623559625
+
+Saida para target 1
+Perceptron 0
+Saida: 0.9142620899826936
+
+Epoca 91
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.016703996003218705
+
+Camada de saida
+Perceptron 1
+Erro: 0.006647517393759608
+
+Saida para target 1
+Perceptron 0
+Saida: 0.9147532644238039
+
+Epoca 92
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.016549523667142966
+
+Camada de saida
+Perceptron 1
+Erro: 0.006576185830320231
+
+Saida para target 1
+Perceptron 0
+Saida: 0.9152341481706696
+
+Epoca 93
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.01639883158598949
+
+Camada de saida
+Perceptron 1
+Erro: 0.006506661096195361
+
+Saida para target 1
+Perceptron 0
+Saida: 0.9157051046548538
+
+Epoca 94
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.01625177362853028
+
+Camada de saida
+Perceptron 1
+Erro: 0.00643887217118246
+
+Saida para target 1
+Perceptron 0
+Saida: 0.9161664798180773
+
+Epoca 95
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.016108211172092202
+
+Camada de saida
+Perceptron 1
+Erro: 0.006372751733933179
+
+Saida para target 1
+Perceptron 0
+Saida: 0.9166186031645298
+
+Epoca 96
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.015968012626897825
+
+Camada de saida
+Perceptron 1
+Erro: 0.006308235924822005
+
+Saida para target 1
+Perceptron 0
+Saida: 0.9170617887377115
+
+Epoca 97
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.015831052995990615
+
+Camada de saida
+Perceptron 1
+Erro: 0.006245264126745527
+
+Saida para target 1
+Perceptron 0
+Saida: 0.9174963360280569
+
+Epoca 98
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.01569721346768908
+
+Camada de saida
+Perceptron 1
+Erro: 0.006183778762297784
+
+Saida para target 1
+Perceptron 0
+Saida: 0.91792253081701
+
+Epoca 99
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.015566381037810877
+
+Camada de saida
+Perceptron 1
+Erro: 0.006123725105919096
+
+Saida para target 1
+Perceptron 0
+Saida: 0.9183406459626913
+
+Epoca 100
+Output
+Camada escondida[0]
+Perceptron 1
+Erro: 0.015438448159170592
+
+Camada de saida
+Perceptron 1
+Erro: 0.006065051109750637
+
+Saida para target 1
+Perceptron 0
+Saida: 0.9187509421318281
+
+Pesos
+Camada de entrada -> camada escondida[0]
+Perceptron 1
+Peso 1: 17.602525730274277
+Peso 2: -14.577543056489102
+
+Camada escondida[0] -> camada de saida
+Perceptron 1
+Peso 1: 2.5489445139592384
+
